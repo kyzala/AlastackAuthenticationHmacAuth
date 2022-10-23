@@ -146,4 +146,4 @@ A data cache abstraction. `MemoryDataCache` is a in-memory implementation.`Distr
 
 ## Samples
 
-Visit the [samples](https://github.com/kyzoru/AlastackAuthentication/tree/main/samples) folder.
+Visit the [samples](https://github.com/kyzala/AlastackAuthentication/tree/main/samples) folder.
