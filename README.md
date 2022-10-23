@@ -130,7 +130,7 @@ X-Forwarded-Host: 192.168.1.103, 192.168.1.102:1080, 192.168.1.103:2080, 192.168
 X-Forwarded-Proto: http, http, http, https, http
 ```
 
-If ForwardIndex is `3`, DefaultHostResolver will return `192.168.1.102:1080`.
+If ForwardIndex is `3`, `DefaultHostResolver` will return `192.168.1.102:1080`.
 
 - **`IReplayRequestValidator`**
 
