@@ -1,0 +1,41 @@
+﻿using Alastack.Authentication.AspNetCore;
+using Microsoft.Extensions.Caching.Distributed;
+using Microsoft.Extensions.Caching.Memory;
+using Microsoft.Extensions.Options;
+
+namespace Alastack.Authentication.Hawk.AspNetCore
+{
+    /// <summary>
+    /// Used to setup defaults for the <see cref="HawkOptions"/>.
+    /// </summary>
+    public class HawkPostConfigureOptions : IPostConfigureOptions<HawkOptions>
+    {
+        private readonly IDataCache _dataCache;
+
+        /// <summary>
+        /// Initializes the <see cref="HawkPostConfigureOptions"/>.
+        /// </summary>
+        /// <param name="memoryCache">The <see cref="IMemoryCache"/>.</param>
+        /// <param name="distributedCache">The <see cref="IDistributedCache"/>.</param>
+        public HawkPostConfigureOptions(IMemoryCache? memoryCache = null, IDistributedCache? distributedCache = null)
+        {
+            _dataCache = new CompositeDataCache(memoryCache, distributedCache);
+        }
+
+        /// <summary>
+        /// Invoked to post configure a <see cref="HawkOptions"/> instance.
+        /// </summary>
+        /// <param name="name">The name of the <see cref="HawkOptions"/> instance being configured.</param>
+        /// <param name="options">The <see cref="HawkOptions"/> instance to configure.</param>
+        public void PostConfigure(string name, HawkOptions options)
+        {
+            if (options.MaxReplayRequestAge > 0 && options.ReplayRequestValidator == null)
+            {
+                options.ReplayRequestValidator = new ReplayRequestValidator(_dataCache);
+            }
+            options.CryptoFactory ??= new DefaultCryptoFactory();
+            options.AuthorizationParameterExtractor ??= new HawkParameterExtractor();
+            options.HostResolver ??= new DefaultHostResolver();
+        }
+    }
+}

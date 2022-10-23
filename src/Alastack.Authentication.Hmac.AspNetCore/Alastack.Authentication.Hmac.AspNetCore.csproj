@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+	<GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+	<Version>1.0.0</Version>
+	<Authors>Alastack</Authors>
+	<Copyright>Copyright © 2022 Alastack</Copyright>
+	<PackageTags>Alastack;Authentication;Hmac;Hawk;AspNetCore;Security</PackageTags>
+	<Description>A .NET API supports Hmac and Hawk authentication and custom authentication extensions. This package supports Hmac authentication for Microsoft ASP.NET Core.</Description>
+	<PackageLicenseExpression>MIT</PackageLicenseExpression>
+	<PackageProjectUrl>https://github.com/kyzala/AlastackAuthentication</PackageProjectUrl>
+	<RepositoryUrl>https://github.com/kyzala/AlastackAuthentication</RepositoryUrl>
+	<RespositoryType>git</RespositoryType>
+	<IncludeSymbols>true</IncludeSymbols>
+	<SymbolPackageFormat>snupkg</SymbolPackageFormat>
+	<PackageOutputPath>..\..\nugets</PackageOutputPath>
+	<PublishRepositoryUrl>true</PublishRepositoryUrl>
+  </PropertyGroup>
+  <ItemGroup>
+	<FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+  <ItemGroup>
+	<ProjectReference Include="..\Alastack.Authentication.AspNetCore\Alastack.Authentication.AspNetCore.csproj" />
+	<ProjectReference Include="..\Alastack.Authentication.Hmac\Alastack.Authentication.Hmac.csproj" />
+  </ItemGroup>
+</Project>
