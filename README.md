@@ -19,7 +19,8 @@ var host = new HostBuilder()
     });
     services.AddSingleton<IValidateOptions<HmacSettings>, HmacSettingsValidation>();
     services.AddTransient<HmacDelegatingHandler>();
-    services.AddHttpClient<ApiClient>("ApiClient", httpClient => httpClient.BaseAddress = "https://localhost:5001/")
+    services.AddHttpClient<ApiClient>("ApiClient", httpClient => 
+        httpClient.BaseAddress = "https://localhost:5001/")
     .AddHttpMessageHandler<HmacDelegatingHandler>();
 }).Build();
 var apiClient = host.Services.GetRequiredService<ApiClient>();
@@ -55,7 +56,8 @@ var host = new HostBuilder()
     });
     services.AddSingleton<IValidateOptions<HawkSettings>, HawkSettingsValidation>();
     services.AddTransient<HawkDelegatingHandler>();
-    services.AddHttpClient<ApiClient>("ApiClient", httpClient => httpClient.BaseAddress = "https://localhost:5001/")
+    services.AddHttpClient<ApiClient>("ApiClient", httpClient => 
+        httpClient.BaseAddress = "https://localhost:5001/")
     .AddHttpMessageHandler<HawkDelegatingHandler>();
 }).Build();
 var apiClient = host.Services.GetRequiredService<ApiClient>();
