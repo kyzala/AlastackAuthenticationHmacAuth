@@ -7,4 +7,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Alastack.Authentication.Hawk\Alastack.Authentication.Hawk.csproj" />
+  </ItemGroup>
+
 </Project>

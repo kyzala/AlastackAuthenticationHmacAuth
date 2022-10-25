@@ -35,7 +35,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Alastack.Authentication.Hma
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Alastack.Authentication.AspNetCore", "src\Alastack.Authentication.AspNetCore\Alastack.Authentication.AspNetCore.csproj", "{E4F536FE-B1DE-494D-9ACC-C1605E991B1E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConfigSample", "samples\ConfigSample\ConfigSample.csproj", "{3EADE93D-FFC1-40E9-8A51-A8FD4F14FDAE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConfigSample", "samples\ConfigSample\ConfigSample.csproj", "{3EADE93D-FFC1-40E9-8A51-A8FD4F14FDAE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicSample", "samples\BasicSample\BasicSample.csproj", "{380D0AF8-91B3-4A6A-9467-63C35DB1C69E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -99,6 +101,10 @@ Global
 		{3EADE93D-FFC1-40E9-8A51-A8FD4F14FDAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3EADE93D-FFC1-40E9-8A51-A8FD4F14FDAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3EADE93D-FFC1-40E9-8A51-A8FD4F14FDAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{380D0AF8-91B3-4A6A-9467-63C35DB1C69E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{380D0AF8-91B3-4A6A-9467-63C35DB1C69E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{380D0AF8-91B3-4A6A-9467-63C35DB1C69E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{380D0AF8-91B3-4A6A-9467-63C35DB1C69E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -118,6 +124,7 @@ Global
 		{D28DDCAC-A880-47AA-A2E5-2F34D5543C42} = {5F9B417E-A221-4CC7-A22B-AE8A4A54599C}
 		{E4F536FE-B1DE-494D-9ACC-C1605E991B1E} = {83478E57-3E5A-4D7A-971E-32F277BCE5F8}
 		{3EADE93D-FFC1-40E9-8A51-A8FD4F14FDAE} = {2EA2B4EB-5742-419B-B3D6-F065C3497DC3}
+		{380D0AF8-91B3-4A6A-9467-63C35DB1C69E} = {2EA2B4EB-5742-419B-B3D6-F065C3497DC3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C5E9B594-ACDB-4D4B-B3B5-99B6CD5DCFB2}
