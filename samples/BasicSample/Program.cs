@@ -46,3 +46,5 @@ catch (HttpRequestException e)
 handler.Dispose();
 authHandler.Dispose();
 client.Dispose();
+
+Console.ReadKey();
