@@ -20,10 +20,10 @@ namespace Alastack.Authentication.Hawk
         /// <summary>
         /// Initializes a new instance of <see cref="HawkDelegatingHandler"/>.
         /// </summary>
-        /// <param name="optionsMonitor">Used for notifications when <see cref="HawkSettings"/> instances change.</param>
-        public HawkDelegatingHandler(IOptionsMonitor<HawkSettings> optionsMonitor)
-        {
-            _optionsMonitor = optionsMonitor;
+        /// <param name="authId">The authentication Id.</param>
+        /// <param name="authKey">The authentication key.</param>
+        public HawkDelegatingHandler(string authId, string authKey) : this (new HawkSettings { AuthId = authId, AuthKey = authKey })
+        {            
         }
 
         /// <summary>
@@ -33,6 +33,15 @@ namespace Alastack.Authentication.Hawk
         public HawkDelegatingHandler(HawkSettings hawkSettings)
         {
             _hawkSettings = hawkSettings;
+        }
+
+        /// <summary>
+        /// Initializes a new instance of <see cref="HawkDelegatingHandler"/>.
+        /// </summary>
+        /// <param name="optionsMonitor">Used for notifications when <see cref="HawkSettings"/> instances change.</param>
+        public HawkDelegatingHandler(IOptionsMonitor<HawkSettings> optionsMonitor)
+        {
+            _optionsMonitor = optionsMonitor;
         }
 
         /// <inheritdoc />

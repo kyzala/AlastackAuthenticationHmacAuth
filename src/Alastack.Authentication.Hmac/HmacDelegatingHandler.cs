@@ -19,10 +19,10 @@ namespace Alastack.Authentication.Hmac
         /// <summary>
         /// Initializes a new instance of <see cref="HmacDelegatingHandler"/>.
         /// </summary>
-        /// <param name="optionsMonitor">Used for notifications when <see cref="HmacSettings"/> instances change.</param>
-        public HmacDelegatingHandler(IOptionsMonitor<HmacSettings> optionsMonitor)
+        /// <param name="appId">The app Id.</param>
+        /// <param name="appKey">The app key.</param>
+        public HmacDelegatingHandler(string appId, string appKey) : this(new HmacSettings { AppId = appId, AppKey = appKey })
         {
-            _optionsMonitor = optionsMonitor;
         }
 
         /// <summary>
@@ -32,6 +32,15 @@ namespace Alastack.Authentication.Hmac
         public HmacDelegatingHandler(HmacSettings hmacSettings)
         {
             _hmacSettings = hmacSettings;
+        }
+
+        /// <summary>
+        /// Initializes a new instance of <see cref="HmacDelegatingHandler"/>.
+        /// </summary>
+        /// <param name="optionsMonitor">Used for notifications when <see cref="HmacSettings"/> instances change.</param>
+        public HmacDelegatingHandler(IOptionsMonitor<HmacSettings> optionsMonitor)
+        {
+            _optionsMonitor = optionsMonitor;
         }
 
         /// <inheritdoc />
