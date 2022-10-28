@@ -14,7 +14,7 @@ var handler = new SocketsHttpHandler
 };
 
 // Create a HawkDelegatingHandler object
-var authHandler = new HawkDelegatingHandler(new HawkSettings { AuthId = "id123", AuthKey = "3@uo45er?" })
+var authHandler = new HawkDelegatingHandler("id123", "3@uo45er?")
 {
     InnerHandler = handler
 };
