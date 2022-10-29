@@ -1,4 +1,4 @@
-using Alastack.Authentication.AspNetCore;
+using Alastack.Authentication;
 using Alastack.Authentication.Hawk.AspNetCore;
 using Alastack.Authentication.Hmac.AspNetCore;
 using ApiSample.Models;

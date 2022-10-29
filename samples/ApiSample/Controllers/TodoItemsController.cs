@@ -5,7 +5,6 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ApiSample.Controllers
 {
-
     [Authorize(AuthenticationSchemes = "Hawk,Hmac")]
     //[Authorize("HawkPolicy")]
     [Route("api/[controller]")]
