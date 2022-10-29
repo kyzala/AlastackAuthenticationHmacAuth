@@ -92,6 +92,8 @@ This repo builds the following packages:
 
 - **`Alastack.Authentication.Hmac.AspNetCore`** - A package supports Hmac authentication for Microsoft ASP.NET Core.
 
+- **`Alastack.Authentication.Hmac.Sql`** - A package supports Sql CredentialProvider.
+
 ## Configure Authentication
 
 - **Hmac** - `HmacSettings` for authentication client, `HmacOptions` for AspNetCoe.
@@ -142,7 +144,7 @@ A credential provider abstraction. `MemoryCredentialProvider<TCredential>` is a 
 
 - **`IDataCache`**
 
-A data cache abstraction. `MemoryDataCache` is a in-memory implementation.`DistributedDataCache` is a distributing implementation. `CompositeDataCache` integrates in-memory and distributing implementation.
+A data cache abstraction. `DataCache` integrates in-memory and distributing cache implementation.
 
 ## Samples
 
