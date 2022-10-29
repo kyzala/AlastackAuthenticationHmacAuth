@@ -1,4 +1,4 @@
-﻿namespace Alastack.Authentication.AspNetCore
+﻿namespace Alastack.Authentication
 {
     /// <summary>
     /// A credential provider abstraction.

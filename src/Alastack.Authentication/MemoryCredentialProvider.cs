@@ -1,4 +1,4 @@
-﻿namespace Alastack.Authentication.AspNetCore
+﻿namespace Alastack.Authentication
 {
     /// <summary>
     /// The in-memory implementation of <see cref="ICredentialProvider{TCredential}"/>.
