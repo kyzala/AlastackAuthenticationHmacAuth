@@ -15,12 +15,21 @@ namespace Alastack.Authentication.Hawk.AspNetCore
         /// <summary>
         /// Initializes the <see cref="HawkPostConfigureOptions"/>.
         /// </summary>
-        /// <param name="memoryCache">The <see cref="IMemoryCache"/>.</param>
-        /// <param name="distributedCache">The <see cref="IDistributedCache"/>.</param>
-        public HawkPostConfigureOptions(IMemoryCache? memoryCache = null, IDistributedCache? distributedCache = null)
+        /// <param name="dataCache">The <see cref="IDataCache"/>.</param>
+        public HawkPostConfigureOptions(IDataCache dataCache)
         {
-            _dataCache = new CompositeDataCache(memoryCache, distributedCache);
+            _dataCache = dataCache;
         }
+
+        ///// <summary>
+        ///// Initializes the <see cref="HawkPostConfigureOptions"/>.
+        ///// </summary>
+        ///// <param name="memoryCache">The <see cref="IMemoryCache"/>.</param>
+        ///// <param name="distributedCache">The <see cref="IDistributedCache"/>.</param>
+        //public HawkPostConfigureOptions(IMemoryCache? memoryCache = null, IDistributedCache? distributedCache = null)
+        //{
+        //    _dataCache = new DataCache(memoryCache, distributedCache);
+        //}
 
         /// <summary>
         /// Invoked to post configure a <see cref="HawkOptions"/> instance.

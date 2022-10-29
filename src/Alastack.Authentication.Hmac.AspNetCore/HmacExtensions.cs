@@ -1,4 +1,5 @@
-﻿using Alastack.Authentication.Hmac;
+﻿using Alastack.Authentication.AspNetCore;
+using Alastack.Authentication.Hmac;
 using Alastack.Authentication.Hmac.AspNetCore;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.Extensions.DependencyInjection.Extensions;
@@ -52,6 +53,7 @@ namespace Microsoft.Extensions.DependencyInjection
         /// <returns>A reference to <paramref name="builder"/> after the operation has completed.</returns>
         public static AuthenticationBuilder AddHmac(this AuthenticationBuilder builder, string authenticationScheme, string displayName, Action<HmacOptions> configureOptions)
         {
+            builder.Services.AddSingleton<IDataCache, DataCache>();
             builder.Services.TryAddEnumerable(ServiceDescriptor.Singleton<IPostConfigureOptions<HmacOptions>, HmacPostConfigureOptions>());
             return builder.AddScheme<HmacOptions, HmacHandler>(authenticationScheme, displayName, configureOptions);
         }

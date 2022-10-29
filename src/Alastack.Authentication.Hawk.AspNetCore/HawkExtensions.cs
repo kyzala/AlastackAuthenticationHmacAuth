@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Authentication;
+﻿using Alastack.Authentication.AspNetCore;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Options;
@@ -51,6 +52,7 @@ namespace Alastack.Authentication.Hawk.AspNetCore
         /// <returns>A reference to <paramref name="builder"/> after the operation has completed.</returns>
         public static AuthenticationBuilder AddHawk(this AuthenticationBuilder builder, string authenticationScheme, string displayName, Action<HawkOptions> configureOptions)
         {
+            builder.Services.AddSingleton<IDataCache, DataCache>();
             builder.Services.TryAddEnumerable(ServiceDescriptor.Singleton<IPostConfigureOptions<HawkOptions>, HawkPostConfigureOptions>());
             return builder.AddScheme<HawkOptions, HawkHandler>(authenticationScheme, displayName, configureOptions);
         }

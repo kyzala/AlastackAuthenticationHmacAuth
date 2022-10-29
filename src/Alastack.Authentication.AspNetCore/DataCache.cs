@@ -6,18 +6,36 @@ namespace Alastack.Authentication.AspNetCore
     /// <summary>
     /// In-memory and distributing implementation of <see cref="IDataCache"/>.
     /// </summary>
-    public class CompositeDataCache : IDataCache
+    public class DataCache : IDataCache
     {
         private readonly IMemoryCache? _memoryCache;
         private readonly IDistributedCache? _distributedCache;
 
         /// <summary>
-        /// Initializes a new instance of <see cref="CompositeDataCache"/>.
+        /// Initializes a new instance of <see cref="DataCache"/>.
+        /// </summary>
+        /// <param name="memoryCache">Represents a local in-memory cache.</param>
+        /// <exception cref="ArgumentNullException">At least one argument can not be null.</exception>
+        public DataCache(IMemoryCache? memoryCache) : this(memoryCache, null)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of <see cref="DataCache"/>.
+        /// </summary>
+        /// <param name="distributedCache">Represents a distributed cache.</param>
+        /// <exception cref="ArgumentNullException">At least one argument can not be null.</exception>
+        public DataCache(IDistributedCache? distributedCache) : this(null, distributedCache)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of <see cref="DataCache"/>.
         /// </summary>
         /// <param name="memoryCache">Represents a local in-memory cache.</param>
         /// <param name="distributedCache">Represents a distributed cache.</param>
         /// <exception cref="ArgumentNullException">At least one argument can not be null.</exception>
-        public CompositeDataCache(IMemoryCache? memoryCache, IDistributedCache? distributedCache)
+        public DataCache(IMemoryCache? memoryCache, IDistributedCache? distributedCache)
         {
             if (distributedCache == null && memoryCache == null)
             {
