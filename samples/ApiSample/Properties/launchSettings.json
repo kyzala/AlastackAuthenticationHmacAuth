@@ -8,8 +8,8 @@
       "launchUrl": "weatherforecast",
       //"applicationUrl": "http://localhost:5000",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development",
-        "COMPlus_ReadyToRun": "0"
+        "ASPNETCORE_ENVIRONMENT": "Development"
+        //"COMPlus_ReadyToRun": "0"
       }
     }
   }
