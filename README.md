@@ -149,3 +149,7 @@ A data cache abstraction. `DataCache` integrates in-memory and distributing cach
 ## Samples
 
 Visit the [samples](https://github.com/kyzala/AlastackAuthentication/tree/main/samples) folder.
+
+## License
+
+Alastack Authentication is licensed under the [MIT](LICENSE) license.
