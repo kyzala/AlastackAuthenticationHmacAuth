@@ -2,6 +2,8 @@
 
 A .NET API supports Hmac and Hawk authentication and custom authentication extensions.
 
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/kyzala/AlastackAuthentication/.NET) ![Nuget](https://img.shields.io/nuget/v/Alastack.Authentication) ![GitHub](https://img.shields.io/github/license/kyzala/AlastackAuthentication) ![GitHub repo size](https://img.shields.io/github/repo-size/kyzala/AlastackAuthentication)
+
 ## Getting started
 
 ### Hmac authentication
