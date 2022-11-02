@@ -6,7 +6,7 @@ A .NET API supports Hmac and Hawk authentication and custom authentication exten
 
 ## Getting started
 
-### Hmac authentication
+### Hmac Authentication
 
 The following code snippet demonstrates creating a Hmac authentication client with dependency injection and then invoking it:
 
@@ -41,7 +41,7 @@ builder.Services.AddAuthentication()
 });
 ```
 
-### Hawk authentication
+### Hawk Authentication
 
 You can use [Postman](https://www.postman.com/) as Hawk authentication client. For more information see [Authorizing requests | Postman Learning Center](https://learning.postman.com/docs/sending-requests/authorization/#hawk-authentication).
 
