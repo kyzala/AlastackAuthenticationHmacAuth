@@ -85,11 +85,11 @@ This repo builds the following packages:
 | Package                                 | Version                                                      | Description                                                  |
 | --------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | Alastack.Authentication                 | ![Nuget](https://img.shields.io/nuget/v/Alastack.Authentication) | Authentication abstraction.                     |
-| Alastack.Authentication.AspNetCore      | ![Nuget](https://img.shields.io/nuget/v/Alastack.Authentication.AspNetCore) | Authentication abstraction for Microsoft ASP.NET Core. |
+| Alastack.Authentication.AspNetCore      | ![Nuget](https://img.shields.io/nuget/v/Alastack.Authentication.AspNetCore) | Authentication abstraction for ASP.NET Core. |
 | Alastack.Authentication.Hawk            | ![Nuget](https://img.shields.io/nuget/v/Alastack.Authentication.Hawk) | Hawk authentication client.               |
-| Alastack.Authentication.Hawk.AspNetCore | ![Nuget](https://img.shields.io/nuget/v/Alastack.Authentication.Hawk.AspNetCore) | Hawk authentication for Microsoft ASP.NET Core. |
+| Alastack.Authentication.Hawk.AspNetCore | ![Nuget](https://img.shields.io/nuget/v/Alastack.Authentication.Hawk.AspNetCore) | Hawk authentication for ASP.NET Core. |
 | Alastack.Authentication.Hmac            | ![Nuget](https://img.shields.io/nuget/v/Alastack.Authentication.Hmac) | Hmac authentication client.               |
-| Alastack.Authentication.Hmac.AspNetCore | ![Nuget](https://img.shields.io/nuget/v/Alastack.Authentication.Hmac.AspNetCore) | Hmac authentication for Microsoft ASP.NET Core. |
+| Alastack.Authentication.Hmac.AspNetCore | ![Nuget](https://img.shields.io/nuget/v/Alastack.Authentication.Hmac.AspNetCore) | Hmac authentication for ASP.NET Core. |
 | Alastack.Authentication.Sql             | ![Nuget](https://img.shields.io/nuget/v/Alastack.Authentication.Sql) | Sql CredentialProvider.                   |
 
 ## Configure Authentication
