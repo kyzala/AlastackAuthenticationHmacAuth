@@ -2,7 +2,7 @@
 
 A .NET API supports Hmac and Hawk authentication and custom authentication extensions.
 
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/kyzala/AlastackAuthentication/.NET) ![Nuget](https://img.shields.io/nuget/v/Alastack.Authentication) ![GitHub](https://img.shields.io/github/license/kyzala/AlastackAuthentication) ![GitHub repo size](https://img.shields.io/github/repo-size/kyzala/AlastackAuthentication)
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/kyzala/AlastackAuthentication/.NET) ![GitHub](https://img.shields.io/github/license/kyzala/AlastackAuthentication) ![GitHub repo size](https://img.shields.io/github/repo-size/kyzala/AlastackAuthentication)
 
 ## Getting started
 
@@ -82,19 +82,15 @@ builder.Services.AddAuthentication()
 
 This repo builds the following packages:
 
-- **`Alastack.Authentication`** - A basic package supports authentication.
-
-- **`Alastack.Authentication.AspNetCore`** - A basic package supports authentication for Microsoft ASP.NET Core.
-
-- **`Alastack.Authentication.Hawk`** - A package supports Hawk authentication client.
-
-- **`Alastack.Authentication.Hawk.AspNetCore`** - A package supports Hawk authentication for Microsoft ASP.NET Core.
-
-- **`Alastack.Authentication.Hmac`** - A package supports Hmac authentication client.
-
-- **`Alastack.Authentication.Hmac.AspNetCore`** - A package supports Hmac authentication for Microsoft ASP.NET Core.
-
-- **`Alastack.Authentication.Hmac.Sql`** - A package supports Sql CredentialProvider.
+| Package                                 | Version                                                      | Description                                                  |
+| --------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| Alastack.Authentication                 | ![Nuget](https://img.shields.io/nuget/v/Alastack.Authentication) | A basic package supports authentication.                     |
+| Alastack.Authentication.AspNetCore      | ![Nuget](https://img.shields.io/nuget/v/Alastack.Authentication.AspNetCore) | A basic package supports authentication for Microsoft ASP.NET Core. |
+| Alastack.Authentication.Hawk            | ![Nuget](https://img.shields.io/nuget/v/Alastack.Authentication.Hawk) | A package supports Hawk authentication client.               |
+| Alastack.Authentication.Hawk.AspNetCore | ![Nuget](https://img.shields.io/nuget/v/Alastack.Authentication.Hawk.AspNetCore) | A package supports Hawk authentication for Microsoft ASP.NET Core. |
+| Alastack.Authentication.Hmac            | ![Nuget](https://img.shields.io/nuget/v/Alastack.Authentication.Hmac) | A package supports Hmac authentication client.               |
+| Alastack.Authentication.Hmac.AspNetCore | ![Nuget](https://img.shields.io/nuget/v/Alastack.Authentication.Hmac.AspNetCore) | A package supports Hmac authentication for Microsoft ASP.NET Core. |
+| Alastack.Authentication.Sql             | ![Nuget](https://img.shields.io/nuget/v/Alastack.Authentication.Sql) | A package supports Sql CredentialProvider.                   |
 
 ## Configure Authentication
 
