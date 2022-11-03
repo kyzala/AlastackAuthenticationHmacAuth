@@ -1,23 +1,45 @@
 ﻿using Dapper;
 using System.Data;
+using static Dapper.SqlMapper;
 
 namespace Alastack.Authentication.Sql
 {
+    /// <summary>
+    /// The Sql implementation of <see cref="ICredentialProvider{TCredential}"/>.
+    /// </summary>
+    /// <typeparam name="TCredential">a credential type.</typeparam>
+    /// <typeparam name="TConnection">a connection type.</typeparam>
     public class SqlCredentialProvider<TCredential, TConnection> : ICredentialProvider<TCredential> where TConnection : IDbConnection, new()
     {
-        public string _connectionString { get; }
-        private readonly string _sql;
+        /// <summary>
+        /// <see cref="SqlCredentialProviderSettings"/>.
+        /// </summary>
+        public SqlCredentialProviderSettings Settings { get; set; }
 
+        /// <summary>
+        /// Initializes a new instance of <see cref="SqlCredentialProvider{TCredential, TConnection}"/>.
+        /// </summary>
+        /// <param name="connectionString">Database connection string.</param>
+        /// <param name="sql">Credential query sql.</param>
         public SqlCredentialProvider(string connectionString, string sql)
+            : this(new SqlCredentialProviderSettings { ConnectionString = connectionString, Sql = sql })
         {
-            _connectionString = connectionString;
-            _sql = sql;
         }
 
+        /// <summary>
+        /// Initializes a new instance of <see cref="SqlCredentialProvider{TCredential, TConnection}"/>.
+        /// </summary>
+        /// <param name="settings"><see cref="SqlCredentialProviderSettings"/>.</param>
+        public SqlCredentialProvider(SqlCredentialProviderSettings settings)
+        {
+            Settings = settings;
+        }
+
+        /// <inheritdoc />
         public virtual async Task<TCredential?> GetCredentialAsync(string id)
         {
-            using var connection = new TConnection { ConnectionString = _connectionString };
-            return await connection.QueryFirstOrDefaultAsync<TCredential>(_sql, new { Id = id });
+            using var connection = new TConnection { ConnectionString = Settings.ConnectionString };
+            return await connection.QueryFirstOrDefaultAsync<TCredential>(Settings.Sql, new { Id = id });
         }
     }
 }
