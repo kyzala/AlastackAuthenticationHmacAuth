@@ -45,6 +45,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Alastack.Authentication.Sql
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alastack.Authentication.MongoDB", "src\Alastack.Authentication.MongoDB\Alastack.Authentication.MongoDB.csproj", "{AD8F69D8-1C3E-4F12-8CE6-CF479AF7518B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MongoDBCredentialSample", "samples\MongoDBCredentialSample\MongoDBCredentialSample.csproj", "{4D718C32-4A69-4651-AAFF-FB7550DE7420}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -123,6 +125,10 @@ Global
 		{AD8F69D8-1C3E-4F12-8CE6-CF479AF7518B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AD8F69D8-1C3E-4F12-8CE6-CF479AF7518B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AD8F69D8-1C3E-4F12-8CE6-CF479AF7518B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D718C32-4A69-4651-AAFF-FB7550DE7420}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D718C32-4A69-4651-AAFF-FB7550DE7420}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D718C32-4A69-4651-AAFF-FB7550DE7420}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D718C32-4A69-4651-AAFF-FB7550DE7420}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -146,6 +152,7 @@ Global
 		{4B40C659-7F79-42D9-9197-EC73C629DD5A} = {2EA2B4EB-5742-419B-B3D6-F065C3497DC3}
 		{8A0189B1-E446-4244-8591-72F8CFBC6E1E} = {83478E57-3E5A-4D7A-971E-32F277BCE5F8}
 		{AD8F69D8-1C3E-4F12-8CE6-CF479AF7518B} = {83478E57-3E5A-4D7A-971E-32F277BCE5F8}
+		{4D718C32-4A69-4651-AAFF-FB7550DE7420} = {2EA2B4EB-5742-419B-B3D6-F065C3497DC3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C5E9B594-ACDB-4D4B-B3B5-99B6CD5DCFB2}
