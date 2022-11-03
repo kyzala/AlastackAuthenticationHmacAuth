@@ -1,4 +1,5 @@
 ﻿using MongoDB.Bson;
+using MongoDB.Bson.Serialization;
 using MongoDB.Driver;
 
 namespace Alastack.Authentication.MongoDB
@@ -43,7 +44,8 @@ namespace Alastack.Authentication.MongoDB
             var collection = database.GetCollection<BsonDocument>(Settings.CollectionName);
             var documents = await collection.FindAsync(new BsonDocument(Settings.KeyName, id));
             var document = await documents.SingleOrDefaultAsync();
-            var credential = (TCredential?)BsonTypeMapper.MapToDotNetValue(document);
+            //var credential = (TCredential?)BsonTypeMapper.MapToDotNetValue(document);
+            var credential = BsonSerializer.Deserialize<TCredential?>(document);
             return credential;
         }
     }
