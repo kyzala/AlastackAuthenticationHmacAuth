@@ -15,8 +15,7 @@ namespace Alastack.Authentication.AspNetCore
         /// Initializes a new instance of <see cref="DataCache"/>.
         /// </summary>
         /// <param name="memoryCache">Represents a local in-memory cache.</param>
-        /// <exception cref="ArgumentNullException">At least one argument can not be null.</exception>
-        public DataCache(IMemoryCache? memoryCache) : this(memoryCache, null)
+        public DataCache(IMemoryCache memoryCache) : this(memoryCache, null)
         {
         }
 
@@ -24,8 +23,7 @@ namespace Alastack.Authentication.AspNetCore
         /// Initializes a new instance of <see cref="DataCache"/>.
         /// </summary>
         /// <param name="distributedCache">Represents a distributed cache.</param>
-        /// <exception cref="ArgumentNullException">At least one argument can not be null.</exception>
-        public DataCache(IDistributedCache? distributedCache) : this(null, distributedCache)
+        public DataCache(IDistributedCache distributedCache) : this(null, distributedCache)
         {
         }
 
