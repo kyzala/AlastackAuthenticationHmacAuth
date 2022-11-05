@@ -1,5 +1,6 @@
 ﻿using MongoDB.Bson;
 using MongoDB.Bson.Serialization;
+using MongoDB.Bson.Serialization.Conventions;
 using MongoDB.Driver;
 
 namespace Alastack.Authentication.MongoDB
@@ -7,9 +8,11 @@ namespace Alastack.Authentication.MongoDB
     /// <summary>
     /// The MongoDB implementation of <see cref="ICredentialProvider{TCredential}"/>.
     /// </summary>
-    /// <typeparam name="TCredential"></typeparam>
+    /// <typeparam name="TCredential">a credential type.</typeparam>
     public class MongoDBCredentialProvider<TCredential> : ICredentialProvider<TCredential>
     {
+        private readonly IMongoDatabase _database;
+
         /// <summary>
         /// <see cref="MongoDBCredentialProviderSettings"/>.
         /// </summary>
@@ -34,18 +37,28 @@ namespace Alastack.Authentication.MongoDB
         public MongoDBCredentialProvider(MongoDBCredentialProviderSettings settings)
         {
             Settings = settings;
+            var client = new MongoClient(Settings.ConnectionString);
+            _database = client.GetDatabase(Settings.DatabaseName);
+
+            var pack = new ConventionPack
+            {
+                new CamelCaseElementNameConvention(),
+                new IgnoreExtraElementsConvention(true)
+            };
+            ConventionRegistry.Register("customConvention", pack, type => true);
         }
 
         /// <inheritdoc />
         public virtual async Task<TCredential?> GetCredentialAsync(string id)
         {
-            var client = new MongoClient(Settings.ConnectionString);
-            var database = client.GetDatabase(Settings.DatabaseName);
-            var collection = database.GetCollection<BsonDocument>(Settings.CollectionName);
+            TCredential? credential = default;
+            var collection = _database.GetCollection<BsonDocument>(Settings.CollectionName);
             var documents = await collection.FindAsync(new BsonDocument(Settings.KeyName, id));
             var document = await documents.SingleOrDefaultAsync();
-            //var credential = BsonTypeMapper.MapToDotNetValue(document);
-            var credential = BsonSerializer.Deserialize<TCredential?>(document);
+            if (document != null)
+            {
+                credential = BsonSerializer.Deserialize<TCredential>(document);
+            }
             return credential;
         }
     }
