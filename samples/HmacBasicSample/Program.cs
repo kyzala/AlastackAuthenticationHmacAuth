@@ -1,4 +1,4 @@
-﻿using Alastack.Authentication.Hawk;
+﻿using Alastack.Authentication.Hmac;
 using System.Net.Security;
 
 // Create an SocketsHttpHandler object
@@ -14,7 +14,7 @@ var handler = new SocketsHttpHandler
 };
 
 // Create a HawkDelegatingHandler object
-var authHandler = new HawkDelegatingHandler("id123", "3@uo45er?")
+var authHandler = new HmacDelegatingHandler("id123", "3@uo45er?")
 {
     InnerHandler = handler
 };
