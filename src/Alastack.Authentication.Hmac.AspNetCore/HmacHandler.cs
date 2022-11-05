@@ -69,7 +69,7 @@ namespace Alastack.Authentication.Hmac.AspNetCore
             }
 
             var credential = await Options.CredentialProvider.GetCredentialAsync(authParams.AppId);
-            if (credential == null)
+            if (credential == null || credential.AppKey == null)
             {
                 return HandleFailureAuthenticateResult("Invalid credential.");
             }

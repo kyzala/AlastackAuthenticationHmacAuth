@@ -65,7 +65,7 @@ namespace Alastack.Authentication.Hawk.AspNetCore
             }
 
             var credential = await Options.CredentialProvider.GetCredentialAsync(authParams.Id);
-            if (credential == null)
+            if (credential == null || credential.AuthKey == null)
             {
                 return HandleFailureAuthenticateResult("Invalid credential.");
             }
