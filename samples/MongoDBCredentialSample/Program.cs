@@ -8,11 +8,11 @@ builder.Services.AddControllers();
 builder.Services.AddAuthentication()
 .AddHawk(options =>
 {
-    options.CredentialProvider = new MongoDBCredentialProvider<HawkCredential>("mongodb://localhost:27017", "Credentials", "Hawk", "AuthId");
+    options.CredentialProvider = new MongoDBCredentialProvider<HawkCredential>("mongodb://localhost:27017", "credentials", "hawk", "authId");
 })
 .AddHmac(options =>
 {
-    options.CredentialProvider = new MongoDBCredentialProvider<HmacCredential>("mongodb://localhost:27017", "Credentials", "Hmac", "AppId");
+    options.CredentialProvider = new MongoDBCredentialProvider<HmacCredential>("mongodb://localhost:27017", "credentials", "hmac", "appId");
 });
 
 var app = builder.Build();
