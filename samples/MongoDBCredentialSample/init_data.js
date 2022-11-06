@@ -1,7 +1,5 @@
 use('credentialdb')
 
-// -------------------------------------
-
 //db.hmac.drop()
 db.hawk.insert(
     {
@@ -21,7 +19,6 @@ db.hawk.createIndex({authId: 1}, {unique: true})
 //db.hawk.find({ 'authId': 'id123' })
 
 
-// -------------------------------------
 
 //db.hmac.drop()
 db.hmac.insert(

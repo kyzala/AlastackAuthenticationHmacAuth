@@ -12,7 +12,7 @@ builder.Services.AddAuthentication()
 .AddHawk(options =>
 {
     options.CredentialProvider = new MongoDBCredentialProvider<HawkCredential>(
-        "mongodb://authreader:Password@localhost:27017?appname=authsample&directConnection=true&serverSelectionTimeoutMS=2000&authSource=credentialdb",
+        "mongodb://localhost:27017?appname=authsample&directConnection=true&serverSelectionTimeoutMS=2000",
         "credentialdb",
         "hawk",
         "authId");
@@ -20,7 +20,7 @@ builder.Services.AddAuthentication()
 .AddHmac(options =>
 {
     options.CredentialProvider = new MongoDBCredentialProvider<HmacCredential>(
-        "mongodb://authreader:Password@localhost:27017?appname=authsample&directConnection=true&serverSelectionTimeoutMS=2000&authSource=credentialdb",
+        "mongodb://localhost:27017?appname=authsample&directConnection=true&serverSelectionTimeoutMS=2000",
         "credentialdb", 
         "hmac",
         "appId");
