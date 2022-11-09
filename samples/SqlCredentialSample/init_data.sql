@@ -1,10 +1,10 @@
 USE [master]
 GO
 
-CREATE DATABASE [CredentialDb1]
+CREATE DATABASE [CredentialDb]
 GO
 
-USE [CredentialDb1]
+USE [CredentialDb]
 GO
 
 CREATE TABLE [dbo].[HawkCredentials](
