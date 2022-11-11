@@ -1,4 +1,4 @@
-﻿namespace ClientSample
+﻿namespace ClientHostSample
 {
     public class TodoItem
     {

@@ -2,7 +2,7 @@
 using System.Text.Json;
 using static System.Net.Mime.MediaTypeNames;
 
-namespace ClientSample
+namespace ClientHostSample
 {
     public sealed class ApiClient
     {

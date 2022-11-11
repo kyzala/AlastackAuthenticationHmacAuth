@@ -1,12 +1,12 @@
 {
   "profiles": {
-    "Alastack.Authentication.EntityFrameworkCore": {
+    "HmacBasicSample": {
       "commandName": "Project",
       "launchBrowser": true,
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
-      "applicationUrl": "https://localhost:51747;http://localhost:51748"
+      "applicationUrl": "https://localhost:61361;http://localhost:61362"
     }
   }
 }
