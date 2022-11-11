@@ -1,0 +1,15 @@
+﻿{
+  "$schema": "https://json.schemastore.org/launchsettings.json",
+  "profiles": {
+    "EntityFrameworkCoreSample": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      //"launchBrowser": true,
+      //"launchUrl": "weatherforecast",
+      //"applicationUrl": "http://localhost:5155",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}
