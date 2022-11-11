@@ -30,7 +30,7 @@ namespace Alastack.Authentication.EntityFrameworkCore
 
         public async Task<TCredential?> GetCredentialAsync(string id)
         {
-            var context = new CredentialContext<TCredential>(_contextOptions, _settings.TableName, _settings.KeyName);
+            using var context = new CredentialContext<TCredential>(_contextOptions, _settings.TableName, _settings.KeyName);
             return await context.Credentials.FindAsync(id);
         }
     }
