@@ -8,7 +8,7 @@ namespace Alastack.Authentication.MongoDB
     /// <summary>
     /// The MongoDB implementation of <see cref="ICredentialProvider{TCredential}"/>.
     /// </summary>
-    /// <typeparam name="TCredential">a credential type.</typeparam>
+    /// <typeparam name="TCredential">A credential type.</typeparam>
     public class MongoDBCredentialProvider<TCredential> : ICredentialProvider<TCredential>
     {
         private readonly IMongoDatabase _database;

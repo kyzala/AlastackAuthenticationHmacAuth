@@ -6,17 +6,17 @@
     public class MongoDBCredentialProviderSettings
     {
         /// <summary>
-        /// Database connection string.
+        /// Credential database connection string.
         /// </summary>
         public string ConnectionString { get; set; } = default!;
 
         /// <summary>
-        /// Database name.
+        /// Credential database name.
         /// </summary>
         public string DatabaseName { get; set; } = default!;
 
         /// <summary>
-        /// Collection name.
+        /// Credential collection name.
         /// </summary>
         public string CollectionName { get; set; } = default!;
 

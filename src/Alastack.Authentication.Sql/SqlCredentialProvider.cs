@@ -7,8 +7,8 @@ namespace Alastack.Authentication.Sql
     /// <summary>
     /// The Sql implementation of <see cref="ICredentialProvider{TCredential}"/>.
     /// </summary>
-    /// <typeparam name="TCredential">a credential type.</typeparam>
-    /// <typeparam name="TConnection">a connection type.</typeparam>
+    /// <typeparam name="TCredential">A credential type.</typeparam>
+    /// <typeparam name="TConnection">A connection type.</typeparam>
     public class SqlCredentialProvider<TCredential, TConnection> : ICredentialProvider<TCredential> where TConnection : IDbConnection, new()
     {
         /// <summary>

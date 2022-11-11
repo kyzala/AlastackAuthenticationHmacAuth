@@ -4,9 +4,9 @@
     /// EFCore CredentialProvider settings.
     /// </summary>
     public class EFCoreCredentialProviderSettings
-    {        
+    {
         /// <summary>
-        /// Table name.
+        /// Credential table name.
         /// </summary>
         public string TableName { get; set; } = default!;
 
