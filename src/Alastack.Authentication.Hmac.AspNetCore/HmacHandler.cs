@@ -41,7 +41,7 @@ namespace Alastack.Authentication.Hmac.AspNetCore
             var authorHeaderValue = authorization.First();
             if (!authorHeaderValue.StartsWith(HmacDefaults.AuthenticationScheme))
             {
-                return HandleFailureAuthenticateResult("Error authorization scheme.");
+                return HandleFailureAuthenticateResult("Invalid authorization scheme.");
             }
 
             HmacParameters authParams;

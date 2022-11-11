@@ -41,7 +41,7 @@ namespace Alastack.Authentication.Hawk.AspNetCore
             var authorHeaderValue = authorization.First();
             if (!authorHeaderValue.StartsWith(HawkDefaults.AuthenticationScheme))
             {
-                return HandleFailureAuthenticateResult("Error authorization scheme.");
+                return HandleFailureAuthenticateResult("Invalid authorization scheme.");
             }
 
             HawkParameters authParams;
