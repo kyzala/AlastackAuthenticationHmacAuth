@@ -92,6 +92,7 @@ This repo builds the following packages:
 | Alastack.Authentication.Hmac.AspNetCore | [![Nuget](https://img.shields.io/nuget/v/Alastack.Authentication.Hmac.AspNetCore)](https://www.nuget.org/packages/Alastack.Authentication.Hmac.AspNetCore) | Hmac authentication for ASP.NET Core. |
 | Alastack.Authentication.Sql             | [![Nuget](https://img.shields.io/nuget/v/Alastack.Authentication.Sql)](https://www.nuget.org/packages/Alastack.Authentication.Sql) | Sql CredentialProvider.                   |
 | Alastack.Authentication.MongoDB             | [![Nuget](https://img.shields.io/nuget/v/Alastack.Authentication.MongoDB)](https://www.nuget.org/packages/Alastack.Authentication.MongoDB) | MongoDB CredentialProvider.                   |
+| Alastack.Authentication.EntityFrameworkCore             | [![Nuget](https://img.shields.io/nuget/v/Alastack.Authentication.EntityFrameworkCore)](https://www.nuget.org/packages/Alastack.Authentication.EntityFrameworkCore) | EntityFrameworkCore CredentialProvider.                   |
 
 ## Configure Authentication
 
