@@ -3,7 +3,7 @@ using Alastack.Authentication.Hmac.AspNetCore;
 using Alastack.Authentication.LiteDB;
 
 const string SeedArgs = "/seed";
-bool seed = false;
+bool seed = true;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddMemoryCache();
