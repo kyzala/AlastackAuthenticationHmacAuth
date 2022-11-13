@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+	<GenerateDocumentationFile>true</GenerateDocumentationFile>
+	<Version>1.0.0</Version>
+	<Authors>kyzala</Authors>
+	<Copyright>Copyright © 2022 kyzala</Copyright>
+	<PackageTags>Alastack;Authentication;Hmac;Hawk;AspNetCore;Security;LiteDB</PackageTags>
+	<Description>A .NET API supports Hmac and Hawk authentication and custom authentication extensions. This package supports LiteDB CredentialProvider.</Description>
+	<PackageLicenseExpression>MIT</PackageLicenseExpression>
+	<PackageProjectUrl>https://github.com/kyzala/AlastackAuthentication</PackageProjectUrl>
+	<RepositoryUrl>https://github.com/kyzala/AlastackAuthentication</RepositoryUrl>
+	<RespositoryType>git</RespositoryType>
+	<IncludeSymbols>true</IncludeSymbols>
+	<SymbolPackageFormat>snupkg</SymbolPackageFormat>
+	<PublishRepositoryUrl>true</PublishRepositoryUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="LiteDB" Version="5.0.12" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Alastack.Authentication\Alastack.Authentication.csproj" />
+  </ItemGroup>
+
+</Project>
