@@ -7,8 +7,12 @@ namespace Alastack.Authentication.EntityFrameworkCore
     /// </summary>
     /// <typeparam name="TCredential">A credential type.</typeparam>
     public class EFCoreCredentialProvider<TCredential> : ICredentialProvider<TCredential> where TCredential : class
-    {        
-        private readonly EFCoreCredentialProviderSettings _settings;
+    {
+        /// <summary>
+        /// <see cref="EFCoreCredentialProviderSettings"/>.
+        /// </summary>
+        private EFCoreCredentialProviderSettings Settings { get; }
+
         private readonly DbContextOptions<CredentialContext<TCredential>> _contextOptions;
 
         /// <summary>
@@ -51,13 +55,13 @@ namespace Alastack.Authentication.EntityFrameworkCore
         public EFCoreCredentialProvider(DbContextOptions<CredentialContext<TCredential>> contextOptions, EFCoreCredentialProviderSettings settings)
         {
             _contextOptions = contextOptions;
-            _settings = settings;
+            Settings = settings;
         }
 
         /// <inheritdoc />
         public virtual async Task<TCredential?> GetCredentialAsync(string id)
         {
-            using var context = new CredentialContext<TCredential>(_contextOptions, _settings.TableName, _settings.KeyName);
+            using var context = new CredentialContext<TCredential>(_contextOptions, Settings.TableName, Settings.KeyName);
             return await context.Credentials.FindAsync(id);
         }
     }
