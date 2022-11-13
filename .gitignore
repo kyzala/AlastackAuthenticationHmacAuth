@@ -361,3 +361,12 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/samples/LiteDBCredentialSample/Data/database.db
+/samples/LiteDBCredentialSample/Data/database-log.db
+/samples/LiteDBCredentialSample/Data/hawk.db
+/samples/LiteDBCredentialSample/Data/hmac.db
+/samples/LiteDBCredentialSample/Data/hawk-log.db
+/samples/LiteDBCredentialSample/Data/hmac-log.db
+/samples/LiteDBCredentialSample/Data/hawk.db
+/samples/LiteDBCredentialSample/Data/hawk-log.db
+/samples/LiteDBCredentialSample/Data/hmac.db
