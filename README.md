@@ -93,6 +93,7 @@ This repo builds the following packages:
 | Alastack.Authentication.Sql             | [![Nuget](https://img.shields.io/nuget/v/Alastack.Authentication.Sql)](https://www.nuget.org/packages/Alastack.Authentication.Sql) | Sql CredentialProvider.                   |
 | Alastack.Authentication.MongoDB             | [![Nuget](https://img.shields.io/nuget/v/Alastack.Authentication.MongoDB)](https://www.nuget.org/packages/Alastack.Authentication.MongoDB) | MongoDB CredentialProvider.                   |
 | Alastack.Authentication.EntityFrameworkCore             | [![Nuget](https://img.shields.io/nuget/v/Alastack.Authentication.EntityFrameworkCore)](https://www.nuget.org/packages/Alastack.Authentication.EntityFrameworkCore) | EntityFrameworkCore CredentialProvider.                   |
+| Alastack.Authentication.LiteDB             | [![Nuget](https://img.shields.io/nuget/v/Alastack.Authentication.LiteDB)](https://www.nuget.org/packages/Alastack.Authentication.LiteDB) | LiteDB CredentialProvider.                   |
 
 ## Configure Authentication
 
