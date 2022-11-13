@@ -28,6 +28,11 @@ var client = new HttpClient(authHandler, disposeHandler: false)
 // Call asynchronous network methods in a try/catch block to handle exceptions
 try
 {
+    var response = await client.GetAsync("/WeatherForecast");
+    response.EnsureSuccessStatusCode();
+    string responseBody = await response.Content.ReadAsStringAsync();
+    Console.WriteLine(responseBody);
+
     Parallel.For(1, 1000, index =>
     {
         var response = client.GetAsync("/WeatherForecast").Result;
@@ -36,11 +41,6 @@ try
         Console.WriteLine(index);
     }
     );
-
-    var response = await client.GetAsync("/WeatherForecast");
-    response.EnsureSuccessStatusCode();
-    string responseBody = await response.Content.ReadAsStringAsync();
-    Console.WriteLine(responseBody);
 }
 catch (HttpRequestException e)
 {
