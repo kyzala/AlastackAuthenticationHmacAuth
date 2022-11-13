@@ -14,7 +14,7 @@ namespace Alastack.Authentication.Sql
         /// <summary>
         /// <see cref="SqlCredentialProviderSettings"/>.
         /// </summary>
-        public SqlCredentialProviderSettings Settings { get; set; }
+        public SqlCredentialProviderSettings Settings { get; }
 
         /// <summary>
         /// Initializes a new instance of <see cref="SqlCredentialProvider{TCredential, TConnection}"/>.
