@@ -16,14 +16,14 @@ namespace Alastack.Authentication.MongoDB
         /// <summary>
         /// <see cref="MongoDBCredentialProviderSettings"/>.
         /// </summary>
-        public MongoDBCredentialProviderSettings Settings { get; set; }
+        public MongoDBCredentialProviderSettings Settings { get; }
 
         /// <summary>
         /// Initializes a new instance of <see cref="MongoDBCredentialProvider{TCredential}"/>.
         /// </summary>
         /// <param name="connectionString">Database connection string.</param>
         /// <param name="databaseName">Database name.</param>
-        /// <param name="collectionName">Collection name.</param>
+        /// <param name="collectionName">Credential collection name.</param>
         /// <param name="keyName">Credential id field name.</param>
         public MongoDBCredentialProvider(string connectionString, string databaseName, string collectionName, string keyName)
             : this(new MongoDBCredentialProviderSettings { ConnectionString = connectionString, DatabaseName = databaseName, CollectionName = collectionName, KeyName = keyName })
