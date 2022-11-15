@@ -82,8 +82,6 @@ builder.Services.AddAuthentication()
 
 This repo builds the following packages.
 
-Authentication common packages:
-
 | Package                                 | Version                                                      | Description                                                  |
 | --------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | Alastack.Authentication                 | [![Nuget](https://img.shields.io/nuget/v/Alastack.Authentication)](https://www.nuget.org/packages/Alastack.Authentication) | Authentication abstraction.                     |
