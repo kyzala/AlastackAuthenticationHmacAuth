@@ -10,14 +10,14 @@ A .NET API supports Hmac and Hawk authentication and custom authentication exten
 
 Client App：
 
-```dotnetcli
+```
 dotnet add package Alastack.Authentication.Hmac
 dotnet add package Alastack.Authentication.Hawk
 ```
 
 AspNetCore：
 
-```dotnetcli
+```
 dotnet add package Alastack.Authentication.Hmac.AspNetCore
 dotnet add package Alastack.Authentication.Hawk.AspNetCore
 ```
