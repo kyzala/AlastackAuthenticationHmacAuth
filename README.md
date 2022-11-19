@@ -6,6 +6,22 @@ A .NET API supports Hmac and Hawk authentication and custom authentication exten
 
 ## Getting started
 
+### Install package from the .NET CLI
+
+Client App：
+
+```dotnetcli
+dotnet add package Alastack.Authentication.Hmac
+dotnet add package Alastack.Authentication.Hawk
+```
+
+AspNetCore：
+
+```dotnetcli
+dotnet add package Alastack.Authentication.Hmac.AspNetCore
+dotnet add package Alastack.Authentication.Hawk.AspNetCore
+```
+
 ### Hmac Authentication
 
 The following code snippet demonstrates creating a Hmac authentication client with dependency injection and then invoking it:
