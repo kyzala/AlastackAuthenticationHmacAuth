@@ -25,13 +25,13 @@ namespace Alastack.Authentication.AspNetCore
             {
                 return false;
             }
-            var val = await _dataCache.GetAsync($"{id}:{nonce}");
+            var val = await _dataCache.GetAsync($"{id}||{nonce}");
             if (val != null)
             {
                 return true;
             }
             var data = Encoding.UTF8.GetBytes(timestamp.ToString());
-            await _dataCache.SetAsync($"{id}:{nonce}", data, TimeSpan.FromSeconds(maxReplayRequestAge));
+            await _dataCache.SetAsync($"{id}||{nonce}", data, TimeSpan.FromSeconds(maxReplayRequestAge));
             return false;
         }
     }
