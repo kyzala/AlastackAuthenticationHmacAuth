@@ -1,7 +1,6 @@
-﻿using Alastack.Authentication.HmacAuth.AspNetCore;
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 
-namespace Microsoft.Extensions.DependencyInjection
+namespace Alastack.Authentication.HmacAuth.AspNetCore
 {
     /// <summary>
     /// Extension methods to add Hawk authentication capabilities to an HTTP application pipeline.
