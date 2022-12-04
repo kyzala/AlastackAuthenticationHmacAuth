@@ -1,10 +1,11 @@
 ﻿using Alastack.Authentication.AspNetCore;
+using Alastack.Authentication.HmacAuth;
+using Alastack.Authentication.HmacAuth.AspNetCore;
 using Microsoft.AspNetCore.Authentication;
-using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Options;
 
-namespace Alastack.Authentication.HmacAuth.AspNetCore
+namespace Microsoft.Extensions.DependencyInjection
 {
     /// <summary>
     /// Extension methods to configure Hawk authentication.
