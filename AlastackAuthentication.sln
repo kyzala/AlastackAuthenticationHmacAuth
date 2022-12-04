@@ -53,9 +53,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClientHostSample", "samples
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EntityFrameworkCoreCredentialSample", "samples\EntityFrameworkCoreCredentialSample\EntityFrameworkCoreCredentialSample.csproj", "{B80D526A-A21D-4489-A4CC-C2AAC2F2ED6C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alastack.Authentication.LiteDB", "src\Alastack.Authentication.LiteDB\Alastack.Authentication.LiteDB.csproj", "{A1B1AA44-BE32-4AD2-9C88-CFDEA62DFBCF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Alastack.Authentication.LiteDB", "src\Alastack.Authentication.LiteDB\Alastack.Authentication.LiteDB.csproj", "{A1B1AA44-BE32-4AD2-9C88-CFDEA62DFBCF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LiteDBCredentialSample", "samples\LiteDBCredentialSample\LiteDBCredentialSample.csproj", "{B2FC7A3B-1330-4E22-A944-6C196A0FFD4A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LiteDBCredentialSample", "samples\LiteDBCredentialSample\LiteDBCredentialSample.csproj", "{B2FC7A3B-1330-4E22-A944-6C196A0FFD4A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alastack.Authentication.HmacAuth", "src\Alastack.Authentication.HmacAuth\Alastack.Authentication.HmacAuth.csproj", "{5F6A3DFA-9A92-4435-B179-F4687572375F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alastack.Authentication.HmacAuth.AspNetCore", "src\Alastack.Authentication.HmacAuth.AspNetCore\Alastack.Authentication.HmacAuth.AspNetCore.csproj", "{912CDCCA-94C9-4AAA-8CD2-3F08D3BE2AFF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -159,6 +163,14 @@ Global
 		{B2FC7A3B-1330-4E22-A944-6C196A0FFD4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B2FC7A3B-1330-4E22-A944-6C196A0FFD4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B2FC7A3B-1330-4E22-A944-6C196A0FFD4A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F6A3DFA-9A92-4435-B179-F4687572375F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F6A3DFA-9A92-4435-B179-F4687572375F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F6A3DFA-9A92-4435-B179-F4687572375F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F6A3DFA-9A92-4435-B179-F4687572375F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{912CDCCA-94C9-4AAA-8CD2-3F08D3BE2AFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{912CDCCA-94C9-4AAA-8CD2-3F08D3BE2AFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{912CDCCA-94C9-4AAA-8CD2-3F08D3BE2AFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{912CDCCA-94C9-4AAA-8CD2-3F08D3BE2AFF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -188,6 +200,8 @@ Global
 		{B80D526A-A21D-4489-A4CC-C2AAC2F2ED6C} = {2EA2B4EB-5742-419B-B3D6-F065C3497DC3}
 		{A1B1AA44-BE32-4AD2-9C88-CFDEA62DFBCF} = {83478E57-3E5A-4D7A-971E-32F277BCE5F8}
 		{B2FC7A3B-1330-4E22-A944-6C196A0FFD4A} = {2EA2B4EB-5742-419B-B3D6-F065C3497DC3}
+		{5F6A3DFA-9A92-4435-B179-F4687572375F} = {83478E57-3E5A-4D7A-971E-32F277BCE5F8}
+		{912CDCCA-94C9-4AAA-8CD2-3F08D3BE2AFF} = {83478E57-3E5A-4D7A-971E-32F277BCE5F8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C5E9B594-ACDB-4D4B-B3B5-99B6CD5DCFB2}
