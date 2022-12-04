@@ -13,8 +13,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Alastack.Authentication.Haw
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Alastack.Authentication.Hawk", "src\Alastack.Authentication.Hawk\Alastack.Authentication.Hawk.csproj", "{AF0FB28D-D47A-4451-B53C-B2197501DB36}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiSample", "samples\ApiSample\ApiSample.csproj", "{FA4411FF-DBFB-43DA-BFB7-121C141E709D}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RefitSample", "samples\RefitSample\RefitSample.csproj", "{9182FC0E-5C85-400D-BAA5-EB9688CE5BD0}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Alastack.Authentication.Hawk.Tests", "test\Alastack.Authentication.Hawk.Tests\Alastack.Authentication.Hawk.Tests.csproj", "{63677F51-1F23-4D0A-9223-331A8F563951}"
@@ -57,9 +55,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Alastack.Authentication.Lit
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LiteDBCredentialSample", "samples\LiteDBCredentialSample\LiteDBCredentialSample.csproj", "{B2FC7A3B-1330-4E22-A944-6C196A0FFD4A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alastack.Authentication.HmacAuth", "src\Alastack.Authentication.HmacAuth\Alastack.Authentication.HmacAuth.csproj", "{5F6A3DFA-9A92-4435-B179-F4687572375F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Alastack.Authentication.HmacAuth", "src\Alastack.Authentication.HmacAuth\Alastack.Authentication.HmacAuth.csproj", "{5F6A3DFA-9A92-4435-B179-F4687572375F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alastack.Authentication.HmacAuth.AspNetCore", "src\Alastack.Authentication.HmacAuth.AspNetCore\Alastack.Authentication.HmacAuth.AspNetCore.csproj", "{912CDCCA-94C9-4AAA-8CD2-3F08D3BE2AFF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Alastack.Authentication.HmacAuth.AspNetCore", "src\Alastack.Authentication.HmacAuth.AspNetCore\Alastack.Authentication.HmacAuth.AspNetCore.csproj", "{912CDCCA-94C9-4AAA-8CD2-3F08D3BE2AFF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiHostSample", "samples\ApiHostSample\ApiHostSample.csproj", "{1BC1C93E-445D-4BC4-8830-B5590C8F13EC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,10 +75,6 @@ Global
 		{AF0FB28D-D47A-4451-B53C-B2197501DB36}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AF0FB28D-D47A-4451-B53C-B2197501DB36}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AF0FB28D-D47A-4451-B53C-B2197501DB36}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FA4411FF-DBFB-43DA-BFB7-121C141E709D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FA4411FF-DBFB-43DA-BFB7-121C141E709D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FA4411FF-DBFB-43DA-BFB7-121C141E709D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FA4411FF-DBFB-43DA-BFB7-121C141E709D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9182FC0E-5C85-400D-BAA5-EB9688CE5BD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9182FC0E-5C85-400D-BAA5-EB9688CE5BD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9182FC0E-5C85-400D-BAA5-EB9688CE5BD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -171,6 +167,10 @@ Global
 		{912CDCCA-94C9-4AAA-8CD2-3F08D3BE2AFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{912CDCCA-94C9-4AAA-8CD2-3F08D3BE2AFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{912CDCCA-94C9-4AAA-8CD2-3F08D3BE2AFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BC1C93E-445D-4BC4-8830-B5590C8F13EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BC1C93E-445D-4BC4-8830-B5590C8F13EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BC1C93E-445D-4BC4-8830-B5590C8F13EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BC1C93E-445D-4BC4-8830-B5590C8F13EC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -178,7 +178,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{1FA1219D-E0BD-4FF6-800A-5CFCDA38219D} = {83478E57-3E5A-4D7A-971E-32F277BCE5F8}
 		{AF0FB28D-D47A-4451-B53C-B2197501DB36} = {83478E57-3E5A-4D7A-971E-32F277BCE5F8}
-		{FA4411FF-DBFB-43DA-BFB7-121C141E709D} = {2EA2B4EB-5742-419B-B3D6-F065C3497DC3}
 		{9182FC0E-5C85-400D-BAA5-EB9688CE5BD0} = {2EA2B4EB-5742-419B-B3D6-F065C3497DC3}
 		{63677F51-1F23-4D0A-9223-331A8F563951} = {5F9B417E-A221-4CC7-A22B-AE8A4A54599C}
 		{BA1BB215-6DE2-4EAF-8B92-B7C72605B536} = {2EA2B4EB-5742-419B-B3D6-F065C3497DC3}
@@ -202,6 +201,7 @@ Global
 		{B2FC7A3B-1330-4E22-A944-6C196A0FFD4A} = {2EA2B4EB-5742-419B-B3D6-F065C3497DC3}
 		{5F6A3DFA-9A92-4435-B179-F4687572375F} = {83478E57-3E5A-4D7A-971E-32F277BCE5F8}
 		{912CDCCA-94C9-4AAA-8CD2-3F08D3BE2AFF} = {83478E57-3E5A-4D7A-971E-32F277BCE5F8}
+		{1BC1C93E-445D-4BC4-8830-B5590C8F13EC} = {2EA2B4EB-5742-419B-B3D6-F065C3497DC3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C5E9B594-ACDB-4D4B-B3B5-99B6CD5DCFB2}
