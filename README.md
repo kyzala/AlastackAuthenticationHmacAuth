@@ -28,6 +28,28 @@ dotnet add package Alastack.Authentication.Hawk.AspNetCore
 
 ### Hmac Authentication
 
+The following code snippet demonstrates creating a Hmac authentication client:
+
+```csharp
+var authHandler = new HmacDelegatingHandler("id123", "3@uo45er?")
+{
+    InnerHandler = new SocketsHttpHandler
+    {
+        ConnectTimeout = TimeSpan.FromSeconds(10),
+        PooledConnectionLifetime = TimeSpan.FromSeconds(1000),
+        SslOptions = new SslClientAuthenticationOptions()
+        {
+            RemoteCertificateValidationCallback = (sender, certificate, chain, errors) => true,
+        },
+        UseCookies = false
+    }
+};
+var client = new HttpClient(authHandler, disposeHandler: false)
+{
+    BaseAddress = new Uri("https://localhost:5001/")
+};
+```
+
 The following code snippet demonstrates creating a Hmac authentication client with dependency injection and then invoking it:
 
 ```csharp
@@ -64,6 +86,28 @@ builder.Services.AddAuthentication()
 ### Hawk Authentication
 
 You can use [Postman](https://www.postman.com/) as Hawk authentication client. For more information see [Authorizing requests | Postman Learning Center](https://learning.postman.com/docs/sending-requests/authorization/#hawk-authentication).
+
+The following code snippet demonstrates creating a Hawk authentication client:
+
+```csharp
+var authHandler = new HawkDelegatingHandler("id123", "3@uo45er?")
+{
+    InnerHandler = new SocketsHttpHandler
+    {
+        ConnectTimeout = TimeSpan.FromSeconds(10),
+        PooledConnectionLifetime = TimeSpan.FromSeconds(1000),
+        SslOptions = new SslClientAuthenticationOptions()
+        {
+            RemoteCertificateValidationCallback = (sender, certificate, chain, errors) => true,
+        },
+        UseCookies = false
+    }
+};
+var client = new HttpClient(authHandler, disposeHandler: false)
+{
+    BaseAddress = new Uri("https://localhost:5001/")
+};
+```
 
 The following code snippet demonstrates creating a Hawk authentication client with dependency injection and then invoking it:
 
