@@ -1,4 +1,4 @@
-namespace ApiSample
+namespace ApiHostSample
 {
     public class WeatherForecast
     {

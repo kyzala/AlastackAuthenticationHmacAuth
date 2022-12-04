@@ -1,4 +1,4 @@
-﻿namespace ApiSample.Models
+﻿namespace ApiHostSample.Models
 {
     public class TodoItem
     {

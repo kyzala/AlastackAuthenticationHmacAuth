@@ -1,10 +1,10 @@
 using Alastack.Authentication;
 using Alastack.Authentication.Hawk.AspNetCore;
 using Alastack.Authentication.Hmac.AspNetCore;
-using ApiSample.Models;
+using ApiHostSample.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace ApiSample
+namespace ApiHostSample
 {
     public class Program
     {

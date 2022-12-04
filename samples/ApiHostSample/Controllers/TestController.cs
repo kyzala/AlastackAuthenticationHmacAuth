@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace ApiSample.Controllers
+namespace ApiHostSample.Controllers
 {
     [Authorize]
     [Route("api/[controller]")]

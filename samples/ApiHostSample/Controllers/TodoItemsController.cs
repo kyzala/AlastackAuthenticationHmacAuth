@@ -1,9 +1,9 @@
-﻿using ApiSample.Models;
+﻿using ApiHostSample.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
-namespace ApiSample.Controllers
+namespace ApiHostSample.Controllers
 {
     [Authorize(AuthenticationSchemes = "Hawk,Hmac")]
     //[Authorize("HawkPolicy")]
