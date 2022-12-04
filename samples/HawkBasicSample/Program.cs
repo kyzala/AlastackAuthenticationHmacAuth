@@ -8,7 +8,7 @@ var handler = new SocketsHttpHandler
     PooledConnectionLifetime = TimeSpan.FromSeconds(1000),
     SslOptions = new SslClientAuthenticationOptions()
     {
-        RemoteCertificateValidationCallback = (sender, certificate, chain, errors) => true,
+        RemoteCertificateValidationCallback = (sender, certificate, chain, errors) => true
     },
     UseCookies = false
 };
