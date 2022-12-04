@@ -1,7 +1,9 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ApiSample.Controllers
 {
+    [Authorize(AuthenticationSchemes = "Hawk,Hmac")]
     [ApiController]
     [Route("[controller]")]
     public class WeatherForecastController : ControllerBase
