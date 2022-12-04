@@ -39,7 +39,7 @@ var authHandler = new HmacDelegatingHandler("id123", "3@uo45er?")
         PooledConnectionLifetime = TimeSpan.FromSeconds(1000),
         SslOptions = new SslClientAuthenticationOptions()
         {
-            RemoteCertificateValidationCallback = (sender, certificate, chain, errors) => true,
+            RemoteCertificateValidationCallback = (sender, certificate, chain, errors) => true
         },
         UseCookies = false
     }
@@ -98,7 +98,7 @@ var authHandler = new HawkDelegatingHandler("id123", "3@uo45er?")
         PooledConnectionLifetime = TimeSpan.FromSeconds(1000),
         SslOptions = new SslClientAuthenticationOptions()
         {
-            RemoteCertificateValidationCallback = (sender, certificate, chain, errors) => true,
+            RemoteCertificateValidationCallback = (sender, certificate, chain, errors) => true
         },
         UseCookies = false
     }
