@@ -216,4 +216,4 @@ A data cache abstraction. `DataCache` integrates in-memory and distributing cach
 
 ## Samples
 
-Visit the [samples](https://github.com/kyzala/AlastackAuthentication/tree/main/samples) folder.
+Visit the [samples](https://github.com/kyzala/AlastackAuthenticationHmacAuth/tree/main/samples) folder.
