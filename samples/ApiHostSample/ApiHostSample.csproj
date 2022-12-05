@@ -18,8 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Alastack.Authentication.Hawk.AspNetCore\Alastack.Authentication.Hawk.AspNetCore.csproj" />
-    <ProjectReference Include="..\..\src\Alastack.Authentication.Hmac.AspNetCore\Alastack.Authentication.Hmac.AspNetCore.csproj" />
+    <ProjectReference Include="..\..\src\Alastack.Authentication.HmacAuth.AspNetCore\Alastack.Authentication.HmacAuth.AspNetCore.csproj" />
   </ItemGroup>
 
 </Project>

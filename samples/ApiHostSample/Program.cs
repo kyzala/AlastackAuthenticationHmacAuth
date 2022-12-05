@@ -1,6 +1,5 @@
 using Alastack.Authentication;
-using Alastack.Authentication.Hawk.AspNetCore;
-using Alastack.Authentication.Hmac.AspNetCore;
+using Alastack.Authentication.HmacAuth.AspNetCore;
 using ApiHostSample.Models;
 using Microsoft.EntityFrameworkCore;
 
