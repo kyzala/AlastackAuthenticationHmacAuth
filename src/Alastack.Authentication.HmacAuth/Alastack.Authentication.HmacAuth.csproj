@@ -12,8 +12,8 @@
 	<PackageIcon>icon.png</PackageIcon>
 	<Description>A .NET API supports Hmac and Hawk authentication and custom authentication extensions. This package supports Hmac and Hawk authentication clients.</Description>
 	<PackageLicenseExpression>MIT</PackageLicenseExpression>
-	<PackageProjectUrl>https://github.com/kyzala/AlastackAuthentication</PackageProjectUrl>
-	<RepositoryUrl>https://github.com/kyzala/AlastackAuthentication</RepositoryUrl>
+	<PackageProjectUrl>https://github.com/kyzala/AlastackAuthenticationHmacAuth</PackageProjectUrl>
+	<RepositoryUrl>https://github.com/kyzala/AlastackAuthenticationHmacAuth</RepositoryUrl>
 	<RespositoryType>git</RespositoryType>
 	<IncludeSymbols>true</IncludeSymbols>
 	<SymbolPackageFormat>snupkg</SymbolPackageFormat>

@@ -10,8 +10,8 @@
 	<PackageTags>Alastack;Authentication;Hmac;Hawk;AspNetCore;Security</PackageTags>
 	<Description>A .NET API supports Hmac and Hawk authentication and custom authentication extensions. This is a basic package that supports authentication for ASP.NET Core.</Description>
 	<PackageLicenseExpression>MIT</PackageLicenseExpression>
-	<PackageProjectUrl>https://github.com/kyzala/AlastackAuthentication</PackageProjectUrl>
-	<RepositoryUrl>https://github.com/kyzala/AlastackAuthentication</RepositoryUrl>
+	<PackageProjectUrl>https://github.com/kyzala/AlastackAuthenticationHmacAuth</PackageProjectUrl>
+	<RepositoryUrl>https://github.com/kyzala/AlastackAuthenticationHmacAuth</RepositoryUrl>
 	<RespositoryType>git</RespositoryType>
 	<IncludeSymbols>true</IncludeSymbols>
 	<SymbolPackageFormat>snupkg</SymbolPackageFormat>

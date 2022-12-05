@@ -1,6 +1,5 @@
-using Alastack.Authentication.Hawk.AspNetCore;
-using Alastack.Authentication.Hmac.AspNetCore;
-using Alastack.Authentication.Sql;
+using Alastack.Authentication.HmacAuth.AspNetCore;
+using Alastack.Authentication.HmacAuth.Sql;
 using Microsoft.Data.SqlClient;
 
 var builder = WebApplication.CreateBuilder(args);

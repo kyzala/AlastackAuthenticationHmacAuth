@@ -1,6 +1,5 @@
-using Alastack.Authentication.EntityFrameworkCore;
-using Alastack.Authentication.Hawk.AspNetCore;
-using Alastack.Authentication.Hmac.AspNetCore;
+using Alastack.Authentication.HmacAuth.EntityFrameworkCore;
+using Alastack.Authentication.HmacAuth.AspNetCore;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);

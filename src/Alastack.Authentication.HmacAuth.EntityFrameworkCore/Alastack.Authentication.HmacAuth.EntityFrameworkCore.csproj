@@ -9,10 +9,11 @@
 	<Authors>kyzala</Authors>
 	<Copyright>Copyright © 2022 kyzala</Copyright>
 	<PackageTags>Alastack;Authentication;Hmac;Hawk;AspNetCore;Security;EntityFrameworkCore</PackageTags>
+	<PackageIcon>icon.png</PackageIcon>
 	<Description>A .NET API supports Hmac and Hawk authentication and custom authentication extensions. This package supports EntityFrameworkCore CredentialProvider.</Description>
 	<PackageLicenseExpression>MIT</PackageLicenseExpression>
-	<PackageProjectUrl>https://github.com/kyzala/AlastackAuthentication</PackageProjectUrl>
-	<RepositoryUrl>https://github.com/kyzala/AlastackAuthentication</RepositoryUrl>
+	<PackageProjectUrl>https://github.com/kyzala/AlastackAuthenticationHmacAuth</PackageProjectUrl>
+	<RepositoryUrl>https://github.com/kyzala/AlastackAuthenticationHmacAuth</RepositoryUrl>
 	<RespositoryType>git</RespositoryType>
 	<IncludeSymbols>true</IncludeSymbols>
 	<SymbolPackageFormat>snupkg</SymbolPackageFormat>
@@ -23,9 +24,11 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.10" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="6.0.10" />
   </ItemGroup>
-
   <ItemGroup>
-    <ProjectReference Include="..\Alastack.Authentication\Alastack.Authentication.csproj" />
+	<None Include="..\..\icon.png" Pack="true" PackagePath="\" Visible="False" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Alastack.Authentication.HmacAuth\Alastack.Authentication.HmacAuth.csproj" />
   </ItemGroup>
 
 </Project>

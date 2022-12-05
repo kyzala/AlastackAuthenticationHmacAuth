@@ -2,7 +2,7 @@
 using System.Data;
 using static Dapper.SqlMapper;
 
-namespace Alastack.Authentication.Sql
+namespace Alastack.Authentication.HmacAuth.Sql
 {
     /// <summary>
     /// The Sql implementation of <see cref="ICredentialProvider{TCredential}"/>.

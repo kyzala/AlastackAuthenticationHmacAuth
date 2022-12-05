@@ -1,4 +1,4 @@
-﻿namespace Alastack.Authentication.Sql
+﻿namespace Alastack.Authentication.HmacAuth.Sql
 {
     /// <summary>
     /// Sql CredentialProvider settings.

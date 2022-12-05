@@ -1,15 +1,20 @@
-﻿namespace Alastack.Authentication.LiteDB
+﻿namespace Alastack.Authentication.HmacAuth.MongoDB
 {
     /// <summary>
-    /// LiteDB CredentialProvider settings.
+    /// MongoDB CredentialProvider settings.
     /// </summary>
-    public class LiteDBCredentialProviderSettings
+    public class MongoDBCredentialProviderSettings
     {
         /// <summary>
         /// Credential database connection string.
         /// </summary>
         public string ConnectionString { get; set; } = default!;
-                
+
+        /// <summary>
+        /// Credential database name.
+        /// </summary>
+        public string DatabaseName { get; set; } = default!;
+
         /// <summary>
         /// Credential collection name.
         /// </summary>

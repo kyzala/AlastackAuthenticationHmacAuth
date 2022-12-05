@@ -1,6 +1,5 @@
-using Alastack.Authentication.Hawk.AspNetCore;
-using Alastack.Authentication.Hmac.AspNetCore;
-using Alastack.Authentication.MongoDB;
+using Alastack.Authentication.HmacAuth.AspNetCore;
+using Alastack.Authentication.HmacAuth.MongoDB;
 
 // mongodb://localhost:27017?appname=authsample&directConnection=true&serverSelectionTimeoutMS=2000
 // mongodb://authreader:Password@localhost:27017?appname=authsample&directConnection=true&serverSelectionTimeoutMS=2000&authSource=credentialdb

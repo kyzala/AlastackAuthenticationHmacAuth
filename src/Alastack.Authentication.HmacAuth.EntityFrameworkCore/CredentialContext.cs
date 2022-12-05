@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-namespace Alastack.Authentication.EntityFrameworkCore
+namespace Alastack.Authentication.HmacAuth.EntityFrameworkCore
 {
     /// <summary>
     /// A DbContext instance represents a session with the database and can be used to query and save

@@ -1,6 +1,6 @@
 ﻿using LiteDB;
 
-namespace Alastack.Authentication.LiteDB
+namespace Alastack.Authentication.HmacAuth.LiteDB
 {
     /// <summary>
     /// The LiteDB implementation of <see cref="ICredentialProvider{TCredential}"/>.

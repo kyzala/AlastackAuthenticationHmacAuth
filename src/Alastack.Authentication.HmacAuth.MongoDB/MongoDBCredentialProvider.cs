@@ -3,7 +3,7 @@ using MongoDB.Bson.Serialization;
 using MongoDB.Bson.Serialization.Conventions;
 using MongoDB.Driver;
 
-namespace Alastack.Authentication.MongoDB
+namespace Alastack.Authentication.HmacAuth.MongoDB
 {
     /// <summary>
     /// The MongoDB implementation of <see cref="ICredentialProvider{TCredential}"/>.

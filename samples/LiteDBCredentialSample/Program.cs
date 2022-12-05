@@ -1,6 +1,5 @@
-using Alastack.Authentication.Hawk.AspNetCore;
-using Alastack.Authentication.Hmac.AspNetCore;
-using Alastack.Authentication.LiteDB;
+using Alastack.Authentication.HmacAuth.AspNetCore;
+using Alastack.Authentication.HmacAuth.LiteDB;
 
 const string SeedArgs = "/seed";
 bool seed = true;
