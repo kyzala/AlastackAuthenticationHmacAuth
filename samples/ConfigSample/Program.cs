@@ -1,4 +1,4 @@
-﻿using Alastack.Authentication.Hawk;
+﻿using Alastack.Authentication.HmacAuth;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;

@@ -24,8 +24,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Alastack.Authentication.Hmac.AspNetCore\Alastack.Authentication.Hmac.AspNetCore.csproj" />
-    <ProjectReference Include="..\..\src\Alastack.Authentication.Hmac\Alastack.Authentication.Hmac.csproj" />
+    <ProjectReference Include="..\..\src\Alastack.Authentication.HmacAuth.AspNetCore\Alastack.Authentication.HmacAuth.AspNetCore.csproj" />
+    <ProjectReference Include="..\..\src\Alastack.Authentication.HmacAuth\Alastack.Authentication.HmacAuth.csproj" />
   </ItemGroup>
 
 </Project>

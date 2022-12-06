@@ -1,4 +1,6 @@
-﻿namespace Alastack.Authentication.Hawk.Tests
+﻿using Alastack.Authentication.HmacAuth;
+
+namespace Alastack.Authentication.Hawk.Tests
 {
     public class HawkCryptoTests
     {

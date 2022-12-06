@@ -1,5 +1,5 @@
-﻿using Alastack.Authentication.AspNetCore;
-using Alastack.Authentication.Hmac.AspNetCore;
+﻿using Alastack.Authentication.HmacAuth;
+using Alastack.Authentication.HmacAuth.AspNetCore;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
