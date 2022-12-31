@@ -1,13 +1,13 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>	
+	<TargetFrameworks>net6.0;net7.0</TargetFrameworks>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
 	<GenerateDocumentationFile>true</GenerateDocumentationFile>
-	<Version>1.0.0</Version>
+	<Version>1.1.0</Version>
 	<Authors>kyzala</Authors>	
 	<Copyright>Copyright © 2022 kyzala</Copyright>
-	<PackageTags>Alastack;Authentication;Hmac;Hawk;AspNetCore;Security</PackageTags>
+	<PackageTags>Alastack;Authentication;Hmac;Hawk;Security</PackageTags>
 	<Description>A .NET API supports Hmac and Hawk authentication and custom authentication extensions. This is a basic package that supports authentication.</Description>
 	<PackageLicenseExpression>MIT</PackageLicenseExpression>
 	<PackageProjectUrl>https://github.com/kyzala/AlastackAuthenticationHmacAuth</PackageProjectUrl>
