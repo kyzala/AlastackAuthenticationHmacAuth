@@ -28,10 +28,8 @@ namespace Alastack.Authentication.HmacAuth.AspNetCore
         /// <param name="options">The <see cref="HawkOptions"/> instance to configure.</param>
         public void PostConfigure(string name, HawkOptions options)
         {
-            if (options.MaxReplayRequestAge > 0 && options.ReplayRequestValidator == null)
-            {
-                options.ReplayRequestValidator = new ReplayRequestValidator(_dataCache);
-            }
+            options.ReplayRequestValidator ??= new ReplayRequestValidator(_dataCache);
+            options.CredentialCache ??= new CredentialCache<HawkCredential>(_dataCache);
             options.CryptoFactory ??= new DefaultCryptoFactory();
             options.AuthorizationParameterExtractor ??= new HawkParameterExtractor();
             options.HostResolver ??= new DefaultHostResolver();

@@ -37,6 +37,17 @@ namespace Alastack.Authentication.HmacAuth.AspNetCore
         public long MaxReplayRequestAge { get; set; } = 60;
 
         /// <summary>
+        /// Credential cache time. Defaults to <c>60</c> seconds.
+        /// If the value is <c>0</c>, the credential cache will be disabled.
+        /// </summary>
+        public long CredentialCacheTime { get; set; } = 60;
+
+        /// <summary>
+        /// Cache key prefix for nonce and credential.
+        /// </summary>
+        public string? CacheKeyPrefix { get; set; }
+
+        /// <summary>
         /// Override this method to deal with 401 challenge concerns, 
         /// if an authentication scheme in question deals an authentication interaction as part of it's request flow.
         /// </summary>
@@ -46,7 +57,7 @@ namespace Alastack.Authentication.HmacAuth.AspNetCore
         /// <see cref="IReplayRequestValidator"/> interface. The default implementation is <see cref="Alastack.Authentication.AspNetCore.ReplayRequestValidator"/>.
         /// If the value is <c>null</c>, the replay request verification will be disabled.
         /// </summary>
-        public IReplayRequestValidator? ReplayRequestValidator { get; set; }
+        public IReplayRequestValidator ReplayRequestValidator { get; set; } = default!;
 
         /// <summary>
         /// <see cref="ICryptoFactory"/> interface. The default implementation is <see cref="DefaultCryptoFactory"/>.
@@ -67,6 +78,11 @@ namespace Alastack.Authentication.HmacAuth.AspNetCore
         /// <see cref="ICredentialProvider{TCredential}"/> interface.
         /// </summary>
         public ICredentialProvider<HmacCredential> CredentialProvider { get; set; } = default!;
+
+        /// <summary>
+        /// <see cref="ICredentialCache{TCredential}"/> interface.
+        /// </summary>
+        public ICredentialCache<HmacCredential> CredentialCache { get; set; } = default!;
 
         /// <summary>
         /// The Provider may be assigned to an instance of an object created by the application at startup time. The handler
@@ -102,6 +118,11 @@ namespace Alastack.Authentication.HmacAuth.AspNetCore
             if (MaxReplayRequestAge < 0)
             {
                 throw new ArgumentException($"{nameof(MaxReplayRequestAge)} must be greater than or equal to zero.", nameof(MaxReplayRequestAge));
+            }
+
+            if (CredentialCacheTime < 0)
+            {
+                throw new ArgumentException($"{nameof(CredentialCacheTime)} must be greater than or equal to zero.", nameof(CredentialCacheTime));
             }
 
             if (CredentialProvider == null)
