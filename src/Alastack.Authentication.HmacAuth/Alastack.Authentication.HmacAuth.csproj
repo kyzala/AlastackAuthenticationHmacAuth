@@ -5,12 +5,12 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
 	<GenerateDocumentationFile>true</GenerateDocumentationFile>
-	<Version>1.1.0</Version>
+	<Version>1.2.0</Version>
 	<Authors>kyzala</Authors>
 	<Copyright>Copyright © 2022 kyzala</Copyright>
 	<PackageTags>Alastack;Authentication;Hmac;Hawk;Client;Security</PackageTags>
 	<PackageIcon>icon.png</PackageIcon>
-	<Description>A .NET API supports Hmac and Hawk authentication and custom authentication extensions. This package supports Hmac and Hawk authentication clients.</Description>
+	<Description>A .NET API supports Hmac and Hawk authentication. This package supports Hmac and Hawk authentication clients.</Description>
 	<PackageLicenseExpression>MIT</PackageLicenseExpression>
 	<PackageProjectUrl>https://github.com/kyzala/AlastackAuthenticationHmacAuth</PackageProjectUrl>
 	<RepositoryUrl>https://github.com/kyzala/AlastackAuthenticationHmacAuth</RepositoryUrl>
