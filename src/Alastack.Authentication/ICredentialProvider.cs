@@ -10,7 +10,7 @@
         /// Gets a credential with the given id.
         /// </summary>
         /// <param name="id">credential id</param>
-        /// <returns>The task object representing the asynchronous operation.</returns>
+        /// <returns>The task object representing the asynchronous operation, containing the located value or null.</returns>
         Task<TCredential?> GetCredentialAsync(string id);
     }
 }
