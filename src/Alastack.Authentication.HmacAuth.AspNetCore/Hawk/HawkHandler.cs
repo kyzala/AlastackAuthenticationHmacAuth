@@ -57,17 +57,30 @@ namespace Alastack.Authentication.HmacAuth.AspNetCore
             }
             if (Options.MaxReplayRequestAge > 0 && Options.ReplayRequestValidator != null)
             {
-                var result = await Options.ReplayRequestValidator.ValidateAsync(authParams.Id, authParams.Nonce, authParams.Ts, Options.MaxReplayRequestAge);
+                string nonceKey = String.IsNullOrWhiteSpace(Options.CacheKeyPrefix) ? authParams.Id : $"{Options.CacheKeyPrefix}||{authParams.Id}||{authParams.Nonce}";
+                var result = await Options.ReplayRequestValidator.ValidateAsync(nonceKey, authParams.Nonce, authParams.Ts, Options.MaxReplayRequestAge);
                 if (result)
                 {
                     return HandleFailureAuthenticateResult("Replay request.");
                 }
             }
 
-            var credential = await Options.CredentialProvider.GetCredentialAsync(authParams.Id);
-            if (credential == null || credential.AuthKey == null)
+            HawkCredential? credential = null;
+            string cacheKey = String.IsNullOrWhiteSpace(Options.CacheKeyPrefix) ? authParams.Id : $"{Options.CacheKeyPrefix}||{authParams.Id}";
+            // Get credential from cache.
+            if (Options.CredentialCacheTime > 0)
             {
-                return HandleFailureAuthenticateResult("Invalid credential.");
+                credential = await Options.CredentialCache.GetCredentialAsync(cacheKey);
+            }
+            if (credential == null)
+            {
+                // Get credential from provider.
+                credential = await Options.CredentialProvider.GetCredentialAsync(authParams.Id);
+                if (credential == null || credential.AuthKey == null)
+                {
+                    return HandleFailureAuthenticateResult("Invalid credential.");
+                }
+                await Options.CredentialCache.SetCredentialAsync(cacheKey, credential, Options.CredentialCacheTime);
             }
 
             var crypto = Options.CryptoFactory.Create(credential.HmacAlgorithm, credential.HashAlgorithm, credential.AuthKey);

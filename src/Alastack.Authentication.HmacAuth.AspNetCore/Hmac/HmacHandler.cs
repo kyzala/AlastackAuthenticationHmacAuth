@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.DataProtection.KeyManagement;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
@@ -59,19 +60,32 @@ namespace Alastack.Authentication.HmacAuth.AspNetCore
                 Logger.LogError(ex, "Invalid authorization parameters.");
                 return HandleFailureAuthenticateResult("Invalid authorization parameters.");
             }
-            if (Options.MaxReplayRequestAge > 0 && Options.ReplayRequestValidator != null)
+            if (Options.MaxReplayRequestAge > 0)
             {
-                var result = await Options.ReplayRequestValidator.ValidateAsync(authParams.AppId, authParams.Nonce, authParams.Timestamp, Options.MaxReplayRequestAge);
+                string nonceKey = String.IsNullOrWhiteSpace(Options.CacheKeyPrefix) ? authParams.AppId : $"{Options.CacheKeyPrefix}||{authParams.AppId}||{authParams.Nonce}";
+                var result = await Options.ReplayRequestValidator.ValidateAsync(nonceKey, authParams.Nonce, authParams.Timestamp, Options.MaxReplayRequestAge);
                 if (result)
                 {
                     return HandleFailureAuthenticateResult("Replay request.");
                 }
             }
 
-            var credential = await Options.CredentialProvider.GetCredentialAsync(authParams.AppId);
-            if (credential == null || credential.AppKey == null)
+            HmacCredential? credential = null;
+            string cacheKey = String.IsNullOrWhiteSpace(Options.CacheKeyPrefix) ? authParams.AppId : $"{Options.CacheKeyPrefix}||{authParams.AppId}";
+            // Get credential from cache.
+            if (Options.CredentialCacheTime > 0)
             {
-                return HandleFailureAuthenticateResult("Invalid credential.");
+                credential = await Options.CredentialCache.GetCredentialAsync(cacheKey);
+            }
+            if (credential == null)
+            {
+                // Get credential from provider.
+                credential = await Options.CredentialProvider.GetCredentialAsync(authParams.AppId);
+                if (credential == null || credential.AppKey == null)
+                {
+                    return HandleFailureAuthenticateResult("Invalid credential.");
+                }
+                await Options.CredentialCache.SetCredentialAsync(cacheKey, credential, Options.CredentialCacheTime);
             }
 
             var crypto = Options.CryptoFactory.Create(credential.HmacAlgorithm, credential.HashAlgorithm, credential.AppKey);
