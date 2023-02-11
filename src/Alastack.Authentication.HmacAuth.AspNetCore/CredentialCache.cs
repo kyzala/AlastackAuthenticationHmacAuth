@@ -1,4 +1,6 @@
 ﻿using Alastack.Authentication.AspNetCore;
+using System.Text.Json.Serialization;
+using System.Text.Json;
 
 namespace Alastack.Authentication.HmacAuth.AspNetCore
 {
@@ -10,7 +12,15 @@ namespace Alastack.Authentication.HmacAuth.AspNetCore
     {
         private readonly IDataCache _dataCache;
 
-        
+        private readonly JsonSerializerOptions _options = new()
+        {
+            PropertyNameCaseInsensitive = false,
+            PropertyNamingPolicy = null,//JsonNamingPolicy.CamelCase,
+            WriteIndented = true,
+            IgnoreReadOnlyProperties = true,
+            DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull
+        };
+
         /// <summary>
         /// Initializes a new instance of <see cref="CredentialCache{TCredential}"/>.
         /// </summary>
@@ -21,15 +31,21 @@ namespace Alastack.Authentication.HmacAuth.AspNetCore
         }
 
         /// <inheritdoc />
-        public async Task<TCredential?> GetCredentialAsync(string key)
+        public async Task<TCredential?> GetCredentialAsync(string key, CancellationToken token = default)
         {
-            throw new NotImplementedException();
+            var data = await _dataCache.GetStringAsync(key, token);
+            if (data != null) 
+            {
+                return JsonSerializer.Deserialize<TCredential>(data, _options);
+            }
+            return default;
         }
 
         /// <inheritdoc />
-        public async Task SetCredentialAsync(string key, TCredential credential, long cacheTime)
+        public async Task SetCredentialAsync(string key, TCredential credential, long cacheTime, CancellationToken token = default)
         {
-            throw new NotImplementedException();
+            var data = JsonSerializer.Serialize<TCredential>(credential, _options);
+            await _dataCache.SetStringAsync(key, data, TimeSpan.FromSeconds(cacheTime), token);
         }
     }
 }
