@@ -59,10 +59,10 @@ namespace Alastack.Authentication.HmacAuth.EntityFrameworkCore
         }
 
         /// <inheritdoc />
-        public virtual async Task<TCredential?> GetCredentialAsync(string id)
+        public virtual async Task<TCredential?> GetCredentialAsync(string id, CancellationToken token = default)
         {
             using var context = new CredentialContext<TCredential>(_contextOptions, Settings.TableName, Settings.KeyName);
-            return await context.Credentials.FindAsync(id);
+            return await context.Credentials.FindAsync(id, token);
         }
     }
 }

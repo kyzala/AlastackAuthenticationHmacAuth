@@ -41,7 +41,7 @@ namespace Alastack.Authentication.HmacAuth.LiteDB
         }
 
         /// <inheritdoc />
-        public virtual async Task<TCredential?> GetCredentialAsync(string id)
+        public virtual async Task<TCredential?> GetCredentialAsync(string id, CancellationToken token = default)
         {
             //var database = new LiteDatabase(Settings.ConnectionString);
             //var collection = database.GetCollection<TCredential>(Settings.CollectionName);

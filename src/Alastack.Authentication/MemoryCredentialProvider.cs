@@ -23,7 +23,7 @@
         }
 
         /// <inheritdoc />
-        public async Task<TCredential?> GetCredentialAsync(string id)
+        public async Task<TCredential?> GetCredentialAsync(string id, CancellationToken token = default)
         {
             if (_credentialData.TryGetValue(id, out TCredential? credential))
             {

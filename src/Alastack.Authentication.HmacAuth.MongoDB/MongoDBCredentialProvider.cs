@@ -2,6 +2,7 @@
 using MongoDB.Bson.Serialization;
 using MongoDB.Bson.Serialization.Conventions;
 using MongoDB.Driver;
+using System.Threading;
 
 namespace Alastack.Authentication.HmacAuth.MongoDB
 {
@@ -49,12 +50,12 @@ namespace Alastack.Authentication.HmacAuth.MongoDB
         }
 
         /// <inheritdoc />
-        public virtual async Task<TCredential?> GetCredentialAsync(string id)
+        public virtual async Task<TCredential?> GetCredentialAsync(string id, CancellationToken token = default)
         {
             TCredential? credential = default;
             var collection = _database.GetCollection<BsonDocument>(Settings.CollectionName);
-            var documents = await collection.FindAsync(new BsonDocument(Settings.KeyName, id));
-            var document = await documents.SingleOrDefaultAsync();
+            var documents = await collection.FindAsync(new BsonDocument(Settings.KeyName, id), cancellationToken: token);
+            var document = await documents.SingleOrDefaultAsync(token);
             if (document != null)
             {
                 credential = BsonSerializer.Deserialize<TCredential>(document);
