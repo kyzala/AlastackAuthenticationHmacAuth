@@ -158,7 +158,10 @@ This repo builds the following packages.
 
 ### Performance
 
-`ICredentialCache<TCredential>` defines credential cache abstraction. `CredentialCache<TCredential>` is the default implementation. A `IDataCache` instance stores credential data. `CacheKeyPrefix` and `CredentialCacheTime` options configure cache parameters.
+`ICredentialCache<TCredential>` defines credential cache abstraction.
+`CredentialCache<TCredential>` is the default implementation.
+`IDataCache` instance stores credential data.
+`CacheKeyPrefix` and `CredentialCacheTime` options configure cache parameters.
 
 ## API Extentions
 
