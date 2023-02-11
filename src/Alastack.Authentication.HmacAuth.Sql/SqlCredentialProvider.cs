@@ -36,7 +36,7 @@ namespace Alastack.Authentication.HmacAuth.Sql
         }
 
         /// <inheritdoc />
-        public virtual async Task<TCredential?> GetCredentialAsync(string id)
+        public virtual async Task<TCredential?> GetCredentialAsync(string id, CancellationToken token = default)
         {
             using var connection = new TConnection { ConnectionString = Settings.ConnectionString };
             return await connection.QueryFirstOrDefaultAsync<TCredential>(Settings.Sql, new { Id = id });

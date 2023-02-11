@@ -44,22 +44,22 @@ namespace Alastack.Authentication.AspNetCore
         }
 
         /// <inheritdoc />
-        public async Task<byte[]> GetAsync(string key)
+        public async Task<byte[]?> GetAsync(string key, CancellationToken token = default)
         {
             if (_distributedCache != null)
             {
-                return await _distributedCache.GetAsync(key);
+                return await _distributedCache.GetAsync(key, token).ConfigureAwait(false);
             }
-            return _memoryCache!.Get<byte[]>(key);
+            return _memoryCache!.Get<byte[]?>(key);
         }
 
         /// <inheritdoc />
-        public async Task SetAsync(string key, byte[] value, TimeSpan absoluteExpirationRelativeToNow)
+        public async Task SetAsync(string key, byte[] value, TimeSpan absoluteExpirationRelativeToNow, CancellationToken token = default)
         {
             if (_distributedCache != null)
             {
                 var options = new DistributedCacheEntryOptions().SetSlidingExpiration(absoluteExpirationRelativeToNow);
-                await _distributedCache.SetAsync(key, value, options);
+                await _distributedCache.SetAsync(key, value, options, token);
             }
             _memoryCache!.Set(key, value, absoluteExpirationRelativeToNow);
         }
