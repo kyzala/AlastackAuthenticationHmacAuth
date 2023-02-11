@@ -10,7 +10,8 @@
         /// Gets a credential with the given id.
         /// </summary>
         /// <param name="id">credential id</param>
+        /// <param name="token">Optional. A <see cref="CancellationToken" /> to cancel the operation.</param>
         /// <returns>The task object representing the asynchronous operation, containing the located value or null.</returns>
-        Task<TCredential?> GetCredentialAsync(string id);
+        Task<TCredential?> GetCredentialAsync(string id, CancellationToken token = default);
     }
 }
