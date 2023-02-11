@@ -156,6 +156,10 @@ This repo builds the following packages.
 - **Hmac** - `HmacSettings` for authentication client, `HmacOptions` for AspNetCoe.
 - **Hawk** - `HawkSettings` for authentication client, `HawkOptions` for AspNetCoe.
 
+### Performance
+
+`ICredentialCache<TCredential>` defines credential cache abstraction. `CredentialCache<TCredential>` is the default implementation. A `IDataCache` instance stores credential data. `CacheKeyPrefix` and `CredentialCacheTime` options configure cache parameters.
+
 ## API Extentions
 
 - **`ICrypto`**
