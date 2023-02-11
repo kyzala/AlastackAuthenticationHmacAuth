@@ -19,19 +19,19 @@ namespace Alastack.Authentication.AspNetCore
         }
 
         /// <inheritdoc />
-        public async Task<bool> ValidateAsync(string id, string nonce, long timestamp, long maxReplayRequestAge)
+        public async Task<bool> ValidateAsync(string id, string nonce, long timestamp, long maxReplayRequestAge, CancellationToken token = default)
         {
             if (maxReplayRequestAge == 0)
             {
                 return false;
             }
-            var val = await _dataCache.GetAsync($"{id}||{nonce}");
+            var val = await _dataCache.GetAsync(id, token);
             if (val != null)
             {
                 return true;
             }
-            var data = Encoding.UTF8.GetBytes(timestamp.ToString());
-            await _dataCache.SetAsync($"{id}||{nonce}", data, TimeSpan.FromSeconds(maxReplayRequestAge));
+            //var data = Encoding.UTF8.GetBytes(timestamp.ToString());
+            await _dataCache.SetStringAsync(id, timestamp.ToString(), TimeSpan.FromSeconds(maxReplayRequestAge), token);
             return false;
         }
     }
