@@ -45,7 +45,7 @@ namespace Alastack.Authentication.HmacAuth.AspNetCore
         /// <summary>
         /// Cache key prefix for nonce and credential.
         /// </summary>
-        public string? CacheKeyPrefix { get; set; }
+        public string? CacheKeyPrefix { get; set; } = "hawk";
 
         /// <summary>
         /// Whether to enable server-authentication.

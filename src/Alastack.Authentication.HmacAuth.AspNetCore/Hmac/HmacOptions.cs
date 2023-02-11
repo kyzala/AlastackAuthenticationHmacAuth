@@ -45,7 +45,7 @@ namespace Alastack.Authentication.HmacAuth.AspNetCore
         /// <summary>
         /// Cache key prefix for nonce and credential.
         /// </summary>
-        public string? CacheKeyPrefix { get; set; }
+        public string? CacheKeyPrefix { get; set; } = "hmac";
 
         /// <summary>
         /// Override this method to deal with 401 challenge concerns, 
