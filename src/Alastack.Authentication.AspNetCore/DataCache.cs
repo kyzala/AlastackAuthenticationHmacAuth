@@ -61,7 +61,10 @@ namespace Alastack.Authentication.AspNetCore
                 var options = new DistributedCacheEntryOptions().SetSlidingExpiration(absoluteExpirationRelativeToNow);
                 await _distributedCache.SetAsync(key, value, options, token);
             }
-            _memoryCache!.Set(key, value, absoluteExpirationRelativeToNow);
+            else 
+            {
+                _memoryCache!.Set(key, value, absoluteExpirationRelativeToNow);
+            }
         }
     }
 }
