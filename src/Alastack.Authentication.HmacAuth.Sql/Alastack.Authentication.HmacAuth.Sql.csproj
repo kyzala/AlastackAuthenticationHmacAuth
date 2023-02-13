@@ -10,7 +10,7 @@
 	<Copyright>Copyright © 2022 kyzala</Copyright>
 	<PackageTags>Alastack;Authentication;Hmac;Hawk;Security;Sql</PackageTags>
 	<PackageIcon>icon.png</PackageIcon>
-	<Description>A .NET API supports Hmac and Hawk authentication. This package supports Sql CredentialProvider.</Description>
+	<Description>A Sql CredentialProvider supports Hmac and Hawk authentication.</Description>
 	<PackageLicenseExpression>MIT</PackageLicenseExpression>
 	<PackageProjectUrl>https://github.com/kyzala/AlastackAuthenticationHmacAuth</PackageProjectUrl>
 	<RepositoryUrl>https://github.com/kyzala/AlastackAuthenticationHmacAuth</RepositoryUrl>
