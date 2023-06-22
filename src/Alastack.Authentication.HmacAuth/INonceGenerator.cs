@@ -1,15 +1,14 @@
-﻿namespace Alastack.Authentication.HmacAuth
+﻿namespace Alastack.Authentication.HmacAuth;
+
+/// <summary>
+/// A nonce generator abstraction.
+/// </summary>
+public interface INonceGenerator
 {
     /// <summary>
-    /// A nonce generator abstraction.
+    /// Generate nonce string.
     /// </summary>
-    public interface INonceGenerator
-    {
-        /// <summary>
-        /// Generate nonce string.
-        /// </summary>
-        /// <param name="id">HTTP reqeust id.</param>
-        /// <returns>A nonce string.</returns>
-        string Generate(string id);
-    }
+    /// <param name="id">HTTP reqeust id.</param>
+    /// <returns>A nonce string.</returns>
+    string Generate(string id);
 }

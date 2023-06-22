@@ -1,14 +1,13 @@
-﻿namespace Alastack.Authentication.HmacAuth
+﻿namespace Alastack.Authentication.HmacAuth;
+
+/// <summary>
+/// The default implementation of <see cref="ITimestampCalculator"/>.
+/// </summary>
+public class TimestampCalculator : ITimestampCalculator
 {
-    /// <summary>
-    /// The default implementation of <see cref="ITimestampCalculator"/>.
-    /// </summary>
-    public class TimestampCalculator : ITimestampCalculator
+    /// <inheritdoc />
+    public long Calculate(long timeOffset)
     {
-        /// <inheritdoc />
-        public long Calculate(long timeOffset)
-        {
-            return DateTimeOffset.UtcNow.ToUnixTimeSeconds() + timeOffset;
-        }
+        return DateTimeOffset.UtcNow.ToUnixTimeSeconds() + timeOffset;
     }
 }

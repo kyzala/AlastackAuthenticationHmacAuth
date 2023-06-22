@@ -1,36 +1,35 @@
-﻿namespace Alastack.Authentication.HmacAuth
+﻿namespace Alastack.Authentication.HmacAuth;
+
+/// <summary>
+/// Authentication header
+/// </summary>
+public class AuthenticationHeader
 {
     /// <summary>
-    /// Authentication header
+    /// Authentication header name.
     /// </summary>
-    public class AuthenticationHeader
+    public string HeaderName { get; set; } = "Authorization";
+
+    /// <summary>
+    /// Authentication scheme.
+    /// </summary>
+    public string Scheme { get; set; } = default!;
+
+    /// <summary>
+    /// Authentication parameter.
+    /// </summary>
+    public string Parameter { get; set; } = default!;
+
+    /// <summary>
+    /// Authentication properties.
+    /// </summary>
+    public IDictionary<string, object> Properties { get; } = new Dictionary<string, object>();
+
+    /// <summary>
+    /// Generic header name flag.
+    /// </summary>
+    public bool IsGenericHeaderName
     {
-        /// <summary>
-        /// Authentication header name.
-        /// </summary>
-        public string HeaderName { get; set; } = "Authorization";
-
-        /// <summary>
-        /// Authentication scheme.
-        /// </summary>
-        public string Scheme { get; set; } = default!;
-
-        /// <summary>
-        /// Authentication parameter.
-        /// </summary>
-        public string Parameter { get; set; } = default!;
-
-        /// <summary>
-        /// Authentication properties.
-        /// </summary>
-        public IDictionary<string, object> Properties { get; } = new Dictionary<string, object>();
-
-        /// <summary>
-        /// Generic header name flag.
-        /// </summary>
-        public bool IsGenericHeaderName
-        {
-            get => HeaderName == "Authorization";
-        }
+        get => HeaderName == "Authorization";
     }
 }

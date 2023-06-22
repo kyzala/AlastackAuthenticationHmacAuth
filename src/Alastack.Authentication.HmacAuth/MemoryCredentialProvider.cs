@@ -1,35 +1,34 @@
-﻿namespace Alastack.Authentication.HmacAuth
+﻿namespace Alastack.Authentication.HmacAuth;
+
+/// <summary>
+/// The in-memory implementation of <see cref="ICredentialProvider{TCredential}"/>.
+/// </summary>
+/// <typeparam name="TCredential">a credential type.</typeparam>
+public class MemoryCredentialProvider<TCredential> : ICredentialProvider<TCredential>
 {
+    private readonly IDictionary<string, TCredential> _credentialData;
+
     /// <summary>
-    /// The in-memory implementation of <see cref="ICredentialProvider{TCredential}"/>.
+    /// Inited credential data.
     /// </summary>
-    /// <typeparam name="TCredential">a credential type.</typeparam>
-    public class MemoryCredentialProvider<TCredential> : ICredentialProvider<TCredential>
+    public IDictionary<string, TCredential> CredentialData => _credentialData;
+
+    /// <summary>
+    /// Initializes a new instance of <see cref="MemoryCredentialProvider{TCredential}"/>.
+    /// </summary>
+    /// <param name="credentialData">Inited credential data.</param>
+    public MemoryCredentialProvider(IDictionary<string, TCredential> credentialData)
     {
-        private readonly IDictionary<string, TCredential> _credentialData;
+        _credentialData = credentialData;
+    }
 
-        /// <summary>
-        /// Inited credential data.
-        /// </summary>
-        public IDictionary<string, TCredential> CredentialData => _credentialData;
-
-        /// <summary>
-        /// Initializes a new instance of <see cref="MemoryCredentialProvider{TCredential}"/>.
-        /// </summary>
-        /// <param name="credentialData">Inited credential data.</param>
-        public MemoryCredentialProvider(IDictionary<string, TCredential> credentialData)
+    /// <inheritdoc />
+    public async Task<TCredential?> GetCredentialAsync(string id, CancellationToken token = default)
+    {
+        if (_credentialData.TryGetValue(id, out TCredential? credential))
         {
-            _credentialData = credentialData;
+            return await Task.FromResult<TCredential?>(credential);
         }
-
-        /// <inheritdoc />
-        public async Task<TCredential?> GetCredentialAsync(string id, CancellationToken token = default)
-        {
-            if (_credentialData.TryGetValue(id, out TCredential? credential))
-            {
-                return await Task.FromResult<TCredential?>(credential);
-            }
-            return await Task.FromResult(default(TCredential?));
-        }
+        return await Task.FromResult(default(TCredential?));
     }
 }

@@ -1,20 +1,19 @@
-﻿namespace Alastack.Authentication.HmacAuth.Sql
+﻿namespace Alastack.Authentication.HmacAuth.Sql;
+
+/// <summary>
+/// Sql CredentialProvider settings.
+/// </summary>
+public class SqlCredentialProviderSettings
 {
     /// <summary>
-    /// Sql CredentialProvider settings.
+    /// Database connection string.
     /// </summary>
-    public class SqlCredentialProviderSettings
-    {
-        /// <summary>
-        /// Database connection string.
-        /// </summary>
-        public string ConnectionString { get; set; } = default!;
+    public string ConnectionString { get; set; } = default!;
 
-        /// <summary>
-        /// Credential query sql.
-        /// </summary>
-        public string Sql { get; set; } = default!;
+    /// <summary>
+    /// Credential query sql.
+    /// </summary>
+    public string Sql { get; set; } = default!;
 
-        //public string SqlType { get; set; }
-    }
+    //public string SqlType { get; set; }
 }

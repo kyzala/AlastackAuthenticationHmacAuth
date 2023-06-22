@@ -1,23 +1,22 @@
-﻿namespace Alastack.Authentication.HmacAuth
+﻿namespace Alastack.Authentication.HmacAuth;
+
+/// <summary>
+/// Default values for the Hmac authentication.
+/// </summary>
+public static class HmacDefaults
 {
     /// <summary>
-    /// Default values for the Hmac authentication.
+    /// The default scheme for Hmac authentication. The value is <c>Hmac</c>.
     /// </summary>
-    public static class HmacDefaults
-    {
-        /// <summary>
-        /// The default scheme for Hmac authentication. The value is <c>Hmac</c>.
-        /// </summary>
-        public const string AuthenticationScheme = "Hmac";
+    public const string AuthenticationScheme = "Hmac";
 
-        /// <summary>
-        /// The default display name for Hmac authentication. Defaults to <c>HmacAuthentication</c>.
-        /// </summary>
-        public const string DisplayName = "HmacAuthentication";
+    /// <summary>
+    /// The default display name for Hmac authentication. Defaults to <c>HmacAuthentication</c>.
+    /// </summary>
+    public const string DisplayName = "HmacAuthentication";
 
-        /// <summary>
-        /// The Hmac authentication version. The value is <c>1</c>.
-        /// </summary>
-        public const string Version = "1";
-    }
+    /// <summary>
+    /// The Hmac authentication version. The value is <c>1</c>.
+    /// </summary>
+    public const string Version = "1";
 }

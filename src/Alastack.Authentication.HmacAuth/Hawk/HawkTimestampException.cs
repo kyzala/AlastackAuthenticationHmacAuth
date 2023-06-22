@@ -1,27 +1,26 @@
 ﻿using System.Runtime.Serialization;
 
-namespace Alastack.Authentication.HmacAuth
+namespace Alastack.Authentication.HmacAuth;
+
+/// <summary>
+/// An exception which indicates Invalid server timestamp hash.
+/// </summary>
+[Serializable]
+public class HawkTimestampException : Exception
 {
     /// <summary>
-    /// An exception which indicates Invalid server timestamp hash.
+    /// Server timestamp
     /// </summary>
-    [Serializable]
-    public class HawkTimestampException : Exception
+    public long Timestamp { get; }
+
+    public HawkTimestampException(string message, long ts)
+        : base(message)
     {
-        /// <summary>
-        /// Server timestamp
-        /// </summary>
-        public long Timestamp { get; }
+        Timestamp = ts;
+    }
 
-        public HawkTimestampException(string message, long ts)
-            : base(message)
-        {
-            Timestamp = ts;
-        }
-
-        protected HawkTimestampException(SerializationInfo info, StreamingContext context)
-            : base(info, context)
-        {
-        }
+    protected HawkTimestampException(SerializationInfo info, StreamingContext context)
+        : base(info, context)
+    {
     }
 }

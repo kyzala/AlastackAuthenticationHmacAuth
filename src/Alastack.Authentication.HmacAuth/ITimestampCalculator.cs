@@ -1,15 +1,14 @@
-﻿namespace Alastack.Authentication.HmacAuth
+﻿namespace Alastack.Authentication.HmacAuth;
+
+/// <summary>
+/// A timestamp calculator abstraction.
+/// </summary>
+public interface ITimestampCalculator
 {
     /// <summary>
-    /// A timestamp calculator abstraction.
+    /// Calculate timestamp.
     /// </summary>
-    public interface ITimestampCalculator
-    {
-        /// <summary>
-        /// Calculate timestamp.
-        /// </summary>
-        /// <param name="timeOffset">The time offset(in seconds).</param>
-        /// <returns>Timestamp(in seconds).</returns>
-        long Calculate(long timeOffset);
-    }
+    /// <param name="timeOffset">The time offset(in seconds).</param>
+    /// <returns>Timestamp(in seconds).</returns>
+    long Calculate(long timeOffset);
 }
