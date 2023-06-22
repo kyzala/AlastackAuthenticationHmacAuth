@@ -1,4 +1,4 @@
-﻿namespace Alastack.Authentication
+﻿namespace Alastack.Authentication.HmacAuth
 {
     /// <summary>
     /// A hash algorithms abstraction.

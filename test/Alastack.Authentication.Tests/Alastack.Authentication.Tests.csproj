@@ -23,7 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Alastack.Authentication\Alastack.Authentication.csproj" />
+    <ProjectReference Include="..\..\src\Alastack.Authentication.HmacAuth\Alastack.Authentication.HmacAuth.csproj" />
   </ItemGroup>
 
 </Project>

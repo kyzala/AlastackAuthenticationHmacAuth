@@ -1,7 +1,7 @@
 ﻿using System.Security.Cryptography;
 using System.Text;
 
-namespace Alastack.Authentication
+namespace Alastack.Authentication.HmacAuth
 {
     /// <summary>
     /// The default implementation of <see cref="ICrypto"/>.

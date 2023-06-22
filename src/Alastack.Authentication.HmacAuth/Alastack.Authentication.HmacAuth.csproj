@@ -25,8 +25,5 @@
   <ItemGroup>
 	<None Include="..\..\icon.png" Pack="true" PackagePath="\" Visible="False" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Alastack.Authentication\Alastack.Authentication.csproj" />
-  </ItemGroup>
 
 </Project>

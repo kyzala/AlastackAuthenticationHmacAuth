@@ -1,4 +1,4 @@
-﻿namespace Alastack.Authentication
+﻿namespace Alastack.Authentication.HmacAuth
 {
     /// <summary>
     /// A factory abstraction for a component that can create <see cref="ICrypto"/> instances.

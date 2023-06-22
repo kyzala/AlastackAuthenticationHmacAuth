@@ -1,6 +1,6 @@
 ﻿using System.Text;
 
-namespace Alastack.Authentication
+namespace Alastack.Authentication.HmacAuth
 {
     public static class CryptoFactoryExtentions
     {

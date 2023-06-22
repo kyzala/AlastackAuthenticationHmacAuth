@@ -1,4 +1,4 @@
-﻿namespace Alastack.Authentication
+﻿namespace Alastack.Authentication.HmacAuth
 {
     /// <summary>
     /// The in-memory implementation of <see cref="ICredentialProvider{TCredential}"/>.

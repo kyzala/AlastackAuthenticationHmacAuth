@@ -1,4 +1,4 @@
-﻿namespace Alastack.Authentication
+﻿namespace Alastack.Authentication.HmacAuth
 {
     /// <summary>
     /// a HTTP Authorization header parameter extractor abstraction.

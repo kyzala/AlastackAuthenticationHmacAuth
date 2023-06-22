@@ -1,3 +1,5 @@
+using Alastack.Authentication.HmacAuth;
+
 namespace Alastack.Authentication.Tests
 {
     public class CryptoFactoryTests
