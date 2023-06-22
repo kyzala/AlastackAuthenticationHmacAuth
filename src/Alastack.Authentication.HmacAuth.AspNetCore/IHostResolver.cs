@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 
-namespace Alastack.Authentication.AspNetCore
+namespace Alastack.Authentication.HmacAuth.AspNetCore
 {
     /// <summary>
     /// A host resolver abstraction.

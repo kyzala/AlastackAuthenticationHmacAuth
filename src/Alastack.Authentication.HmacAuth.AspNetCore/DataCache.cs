@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.Caching.Distributed;
 using Microsoft.Extensions.Caching.Memory;
 
-namespace Alastack.Authentication.AspNetCore
+namespace Alastack.Authentication.HmacAuth.AspNetCore
 {
     /// <summary>
     /// In-memory and distributing implementation of <see cref="IDataCache"/>.

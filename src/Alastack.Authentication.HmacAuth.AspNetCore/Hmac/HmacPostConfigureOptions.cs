@@ -1,7 +1,4 @@
-﻿using Alastack.Authentication.AspNetCore;
-using Microsoft.Extensions.Caching.Distributed;
-using Microsoft.Extensions.Caching.Memory;
-using Microsoft.Extensions.Options;
+﻿using Microsoft.Extensions.Options;
 
 namespace Alastack.Authentication.HmacAuth.AspNetCore
 {

@@ -1,5 +1,4 @@
-﻿using Alastack.Authentication.AspNetCore;
-using Alastack.Authentication.HmacAuth;
+﻿using Alastack.Authentication.HmacAuth;
 using Alastack.Authentication.HmacAuth.AspNetCore;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.Extensions.DependencyInjection.Extensions;

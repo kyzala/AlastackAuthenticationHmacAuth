@@ -1,5 +1,4 @@
-﻿using Alastack.Authentication.AspNetCore;
-using Microsoft.AspNetCore.Authentication;
+﻿using Microsoft.AspNetCore.Authentication;
 
 namespace Alastack.Authentication.HmacAuth.AspNetCore
 {

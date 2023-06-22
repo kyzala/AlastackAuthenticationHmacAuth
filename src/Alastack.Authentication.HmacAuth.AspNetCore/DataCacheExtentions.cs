@@ -5,7 +5,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Alastack.Authentication.AspNetCore
+namespace Alastack.Authentication.HmacAuth.AspNetCore
 {
     /// <summary>
     /// DataCache extentions.

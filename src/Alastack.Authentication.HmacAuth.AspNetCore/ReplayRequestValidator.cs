@@ -1,6 +1,6 @@
 ﻿using System.Text;
 
-namespace Alastack.Authentication.AspNetCore
+namespace Alastack.Authentication.HmacAuth.AspNetCore
 {
     /// <summary>
     /// The default implementation of <see cref="IReplayRequestValidator"/>.

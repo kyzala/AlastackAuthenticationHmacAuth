@@ -1,4 +1,4 @@
-﻿namespace Alastack.Authentication.AspNetCore
+﻿namespace Alastack.Authentication.HmacAuth.AspNetCore
 {
     /// <summary>
     /// A data cache abstraction.

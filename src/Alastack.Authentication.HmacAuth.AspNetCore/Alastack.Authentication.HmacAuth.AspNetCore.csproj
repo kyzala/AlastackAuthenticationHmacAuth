@@ -26,7 +26,6 @@
 	<None Include="..\..\icon.png" Pack="true" PackagePath="\" Visible="False" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Alastack.Authentication.AspNetCore\Alastack.Authentication.AspNetCore.csproj" />
     <ProjectReference Include="..\Alastack.Authentication.HmacAuth\Alastack.Authentication.HmacAuth.csproj" />
   </ItemGroup>
 

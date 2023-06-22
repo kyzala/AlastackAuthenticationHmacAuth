@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 
-namespace Alastack.Authentication.AspNetCore
+namespace Alastack.Authentication.HmacAuth.AspNetCore
 {
     /*
      * X-Forwarded-For: ::ffff:192.168.1.102, ::ffff:192.168.1.103, ::ffff:192.168.1.102, ::ffff:192.168.1.103, ::ffff:192.168.1.102
