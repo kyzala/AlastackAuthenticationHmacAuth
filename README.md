@@ -142,8 +142,6 @@ This repo builds the following packages.
 
 | Package                                 | Version                                                      | Description                                                  |
 | --------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| Alastack.Authentication                 | [![Nuget](https://img.shields.io/nuget/v/Alastack.Authentication)](https://www.nuget.org/packages/Alastack.Authentication) | Authentication abstraction.                     |
-| Alastack.Authentication.AspNetCore      | [![Nuget](https://img.shields.io/nuget/v/Alastack.Authentication.AspNetCore)](https://www.nuget.org/packages/Alastack.Authentication.AspNetCore) | Authentication abstraction for ASP.NET Core. |
 | Alastack.Authentication.HmacAuth | [![Nuget](https://img.shields.io/nuget/v/Alastack.Authentication.HmacAuth)](https://www.nuget.org/packages/Alastack.Authentication.HmacAuth) | Hmac and Hawk authentication client.|
 | Alastack.Authentication.HmacAuth.AspNetCore | [![Nuget](https://img.shields.io/nuget/v/Alastack.Authentication.HmacAuth.AspNetCore)](https://www.nuget.org/packages/Alastack.Authentication.HmacAuth.AspNetCore) | Hmac and Hawk authentication for ASP.NET Core.|
 | Alastack.Authentication.HmacAuth.Sql             | [![Nuget](https://img.shields.io/nuget/v/Alastack.Authentication.HmacAuth.Sql)](https://www.nuget.org/packages/Alastack.Authentication.HmacAuth.Sql) | Sql CredentialProvider.                   |
