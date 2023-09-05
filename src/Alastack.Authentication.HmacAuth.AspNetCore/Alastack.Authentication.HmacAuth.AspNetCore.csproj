@@ -19,7 +19,10 @@
 	<SymbolPackageFormat>snupkg</SymbolPackageFormat>
 	<PublishRepositoryUrl>true</PublishRepositoryUrl>
   </PropertyGroup>
-  <ItemGroup>
+  <ItemGroup Condition="'$(TargetFramework)'=='net6.0'">
+	<FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(TargetFramework)'=='net7.0'">
 	<FrameworkReference Include="Microsoft.AspNetCore.App" />
   </ItemGroup>
   <ItemGroup>
