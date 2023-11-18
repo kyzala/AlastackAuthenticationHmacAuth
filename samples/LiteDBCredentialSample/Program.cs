@@ -1,6 +1,8 @@
 using Alastack.Authentication.HmacAuth.AspNetCore;
 using Alastack.Authentication.HmacAuth.LiteDB;
 
+Console.WriteLine(Environment.Version);
+
 const string SeedArgs = "/seed";
 bool seed = true;
 

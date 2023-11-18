@@ -1,6 +1,8 @@
 ﻿using Alastack.Authentication.HmacAuth;
 using System.Net.Security;
 
+Console.WriteLine(Environment.Version);
+
 // Create an SocketsHttpHandler object
 var handler = new SocketsHttpHandler
 {
