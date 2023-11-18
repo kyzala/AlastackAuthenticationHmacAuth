@@ -1,14 +1,14 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-	<TargetFrameworks>net6.0;net7.0</TargetFrameworks>
+	<TargetFrameworks>net6.0;net7.0;net8.0</TargetFrameworks>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
 	<GenerateDocumentationFile>true</GenerateDocumentationFile>
-	<Version>2.0.1</Version>
+	<Version>2.1.0</Version>
 	<Authors>kyzala</Authors>
-	<Copyright>Copyright © 2022 kyzala</Copyright>
-	<PackageTags>Alastack;Authentication;Hmac;Hawk;Security;LiteDB</PackageTags>
+	<Copyright>Copyright © 2023 kyzala</Copyright>
+	<PackageTags>Alastack;Auth;Authentication;Hmac;Hawk;LiteDB</PackageTags>
 	<PackageIcon>icon.png</PackageIcon>
 	<Description>A LiteDB CredentialProvider supports Hmac and Hawk authentication.</Description>
 	<PackageLicenseExpression>MIT</PackageLicenseExpression>
@@ -21,7 +21,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="LiteDB" Version="5.0.16" />
+    <PackageReference Include="LiteDB" Version="5.0.17" />
   </ItemGroup>
   <ItemGroup>
 	<None Include="..\..\icon.png" Pack="true" PackagePath="\" Visible="False" />

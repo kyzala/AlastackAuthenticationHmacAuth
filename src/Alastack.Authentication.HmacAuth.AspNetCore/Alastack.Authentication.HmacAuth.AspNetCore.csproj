@@ -1,14 +1,14 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-	<TargetFrameworks>net6.0;net7.0</TargetFrameworks>
+	<TargetFrameworks>net6.0;net7.0;net8.0</TargetFrameworks>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
 	<GenerateDocumentationFile>true</GenerateDocumentationFile>
-	<Version>2.0.1</Version>
+	<Version>2.1.0</Version>
 	<Authors>kyzala</Authors>
-	<Copyright>Copyright © 2022 kyzala</Copyright>
-	<PackageTags>Alastack;Authentication;Hmac;Hawk;AspNetCore;Security</PackageTags>
+	<Copyright>Copyright © 2023 kyzala</Copyright>
+	<PackageTags>Alastack;Auth;Authentication;Hmac;Hawk;AspNetCore</PackageTags>
 	<PackageIcon>icon.png</PackageIcon>
 	<Description>A .NET API supports Hmac and Hawk authentication for ASP.NET Core.</Description>
 	<PackageLicenseExpression>MIT</PackageLicenseExpression>
@@ -19,10 +19,7 @@
 	<SymbolPackageFormat>snupkg</SymbolPackageFormat>
 	<PublishRepositoryUrl>true</PublishRepositoryUrl>
   </PropertyGroup>
-  <ItemGroup Condition="'$(TargetFramework)'=='net6.0'">
-	<FrameworkReference Include="Microsoft.AspNetCore.App" />
-  </ItemGroup>
-  <ItemGroup Condition="'$(TargetFramework)'=='net7.0'">
+  <ItemGroup>
 	<FrameworkReference Include="Microsoft.AspNetCore.App" />
   </ItemGroup>
   <ItemGroup>
