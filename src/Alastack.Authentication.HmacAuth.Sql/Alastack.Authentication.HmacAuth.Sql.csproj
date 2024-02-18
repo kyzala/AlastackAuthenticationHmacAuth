@@ -21,7 +21,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Dapper" Version="2.1.21" />
+    <PackageReference Include="Dapper" Version="2.1.28" />
   </ItemGroup>
   <ItemGroup>
 	<None Include="..\..\icon.png" Pack="true" PackagePath="\" Visible="False" />
