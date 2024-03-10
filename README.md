@@ -79,7 +79,7 @@ builder.Services.AddAuthentication()
 
 ### Hawk Authentication
 
-You can use [Postman](https://www.postman.com/) as Hawk authentication client. For more information see [Authorizing requests | Postman Learning Center](https://learning.postman.com/docs/sending-requests/authorization/#hawk-authentication).
+You can use [Postman](https://www.postman.com/) as Hawk authentication client. For more information see [Authenticate with Hawk access authentication](https://learning.postman.com/docs/sending-requests/authorization/hawk-authentication/).
 
 ![](docs/hawk.png)
 
