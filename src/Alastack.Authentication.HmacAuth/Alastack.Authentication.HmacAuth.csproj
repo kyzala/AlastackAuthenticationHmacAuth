@@ -1,35 +1,12 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-	<TargetFrameworks>net6.0;net7.0;net8.0</TargetFrameworks>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-	<GenerateDocumentationFile>true</GenerateDocumentationFile>
-	<Version>2.1.0</Version>
-	<Authors>kyzala</Authors>
-	<Copyright>Copyright © 2023 kyzala</Copyright>
+  <PropertyGroup>	
+	<Version>2.1.0</Version>	
 	<PackageTags>Alastack;Auth;Authentication;Hmac;Hawk</PackageTags>
-	<PackageIcon>icon.png</PackageIcon>
 	<Description>A .NET API supports Hmac and Hawk authentication clients.</Description>
-	<PackageLicenseExpression>MIT</PackageLicenseExpression>
-	<PackageProjectUrl>https://github.com/kyzala/AlastackAuthenticationHmacAuth</PackageProjectUrl>
-	<RepositoryUrl>https://github.com/kyzala/AlastackAuthenticationHmacAuth</RepositoryUrl>
-	<RespositoryType>git</RespositoryType>
-	<IncludeSymbols>true</IncludeSymbols>
-	<SymbolPackageFormat>snupkg</SymbolPackageFormat>
-	<PublishRepositoryUrl>true</PublishRepositoryUrl>
   </PropertyGroup>
-  <ItemGroup Condition="'$(TargetFramework)'=='net6.0'">
-	<PackageReference Include="Microsoft.Extensions.Options" Version="6.0.0" />
-  </ItemGroup>
-  <ItemGroup Condition="'$(TargetFramework)'=='net7.0'">
-	<PackageReference Include="Microsoft.Extensions.Options" Version="7.0.1" />
-  </ItemGroup>
-  <ItemGroup Condition="'$(TargetFramework)'=='net8.0'">
-	<PackageReference Include="Microsoft.Extensions.Options" Version="8.0.2" />
-  </ItemGroup>
   <ItemGroup>
-	<None Include="..\..\icon.png" Pack="true" PackagePath="\" Visible="False" />
+	<PackageReference Include="Microsoft.Extensions.Options" />
   </ItemGroup>
 
 </Project>

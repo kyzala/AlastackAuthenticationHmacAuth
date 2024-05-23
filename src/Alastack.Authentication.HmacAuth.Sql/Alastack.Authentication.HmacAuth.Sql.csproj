@@ -1,31 +1,15 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-	<TargetFrameworks>net6.0;net7.0;net8.0</TargetFrameworks>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-	<GenerateDocumentationFile>true</GenerateDocumentationFile>
+  <PropertyGroup>	
 	<Version>2.1.0</Version>
-	<Authors>kyzala</Authors>
-	<Copyright>Copyright © 2023 kyzala</Copyright>
-	<PackageTags>Alastack;Auth;Authentication;Hmac;Hawk;Sql</PackageTags>
-	<PackageIcon>icon.png</PackageIcon>
-	<Description>A Sql CredentialProvider supports Hmac and Hawk authentication.</Description>
-	<PackageLicenseExpression>MIT</PackageLicenseExpression>
-	<PackageProjectUrl>https://github.com/kyzala/AlastackAuthenticationHmacAuth</PackageProjectUrl>
-	<RepositoryUrl>https://github.com/kyzala/AlastackAuthenticationHmacAuth</RepositoryUrl>
-	<RespositoryType>git</RespositoryType>
-	<IncludeSymbols>true</IncludeSymbols>
-	<SymbolPackageFormat>snupkg</SymbolPackageFormat>
-	<PublishRepositoryUrl>true</PublishRepositoryUrl>
+	<PackageTags>Alastack;Auth;Authentication;Hmac;Hawk;Sql</PackageTags>	
+	<Description>A Sql CredentialProvider supports Hmac and Hawk authentication.</Description>	
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Dapper" Version="2.1.28" />
+    <PackageReference Include="Dapper" />
   </ItemGroup>
-  <ItemGroup>
-	<None Include="..\..\icon.png" Pack="true" PackagePath="\" Visible="False" />
-  </ItemGroup>
+  
   <ItemGroup>
     <ProjectReference Include="..\Alastack.Authentication.HmacAuth\Alastack.Authentication.HmacAuth.csproj" />
   </ItemGroup>
